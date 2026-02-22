@@ -146,7 +146,7 @@
   --text-light: #F9FAFB;
   --text-muted: #6B7280;
   --border-light: #E5E7EB;
-  --border-dark: #0B3A38;
+  --border-dark: #D97706;
   
   --gradient-primary: linear-gradient(180deg, #0FA59C 0%, #0B7F7A 100%);
   --gradient-goldShine: linear-gradient(90deg, rgba(242,193,78,0) 0%, rgba(242,193,78,0.55) 50%, rgba(242,193,78,0) 100%);
@@ -518,7 +518,7 @@ select {
   --text-light: #F9FAFB;
   --text-muted: #6B7280;
   --border-light: #E5E7EB;
-  --border-dark: #0B3A38;
+  --border-dark: #D97706;
 }
 
 .navbar {
@@ -729,7 +729,7 @@ select {
   --text-light: #F9FAFB;
   --text-muted: #6B7280;
   --border-light: #E5E7EB;
-  --border-dark: #0B3A38;
+  --border-dark: #D97706;
 }
 
 .navbar {
@@ -1558,7 +1558,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   --text-light: #F9FAFB;
   --text-muted: #6B7280;
   --border-light: #E5E7EB;
-  --border-dark: #0B3A38;
+  --border-dark: #D97706;
 }
 
 .site-footer {
@@ -6566,12 +6566,12 @@ main.page-container.ecommerce-page,
   color: var(--primary) !important; 
 }
 .cart-link.nav-cart .cart-count { 
-  background: var(--accent, #FF2DAA) !important; 
+  background: var(--accent, #1A4D8F) !important; 
   color: #fff !important; 
 }
 .cart-link.nav-cart:hover .cart-count { 
   background: #FFFFFF !important; 
-  color: var(--accent, #FF2DAA) !important; 
+  color: var(--accent, #1A4D8F) !important; 
 }
 
 /* Login link - V2 themed */
@@ -6972,7 +6972,7 @@ html[lang="ar"] .mobile-search-panel .search-wrapper,
     align-items: center !important;
     justify-content: center !important;
     padding: 0 4px !important;
-    background: var(--accent, #FF2DAA) !important;
+    background: var(--accent, #1A4D8F) !important;
     color: #fff !important;
   }
 }
@@ -7077,7 +7077,7 @@ html[lang="ar"] .mobile-search-panel .search-wrapper,
     top: -6px !important;
     inset-inline-end: -6px !important;
     inset-inline-start: auto !important;
-    background: var(--accent, #FF2DAA) !important;
+    background: var(--accent, #1A4D8F) !important;
     color: #fff !important;
     font-size: 10px !important;
     font-weight: 700 !important;
@@ -7630,7 +7630,7 @@ nav.navbar .menu-item-has-children::after,
 
   /* Ensure cart badge uses accent (some sites have --primary == bg) */
   .cart-count {
-    background: var(--accent, #FF2DAA) !important;
+    background: var(--accent, #1A4D8F) !important;
     color: #fff !important;
   }
 }
