@@ -1,79 +1,92 @@
-# Business — Generative Engine Optimization Map
+# Idron.co2 — Generative Engine Optimization Map
+
+> A חיות מחמד וציוד לבעלי חיים business.
 
 ---
 
 ## Pages
 
 ### בית
-https://example.com
+https://idron-co2.zappy5.app
 גלו מבחר אקווריומים וטרריומים לזוחלים בעיצוב ייחודי. ציוד איכותי לדגי נוי וזוחלים במחירים מעולים. הזמינו עכשיו והפכו את הבית לגן עדן טבעי!
 
 ### קטגוריות
-https://example.com/categories
+https://idron-co2.zappy5.app/categories
 סיווג מושלם של כל הציוד: אקווריומים, טרריומים, מזון, תאורה, מסננים ועוד. מצאו בקלות את כל מה שחיית המחמד שלכם צריכה. גלו את הקטגוריות שלנו!
 
 ### מדריכים
-https://example.com/guides
+https://idron-co2.zappy5.app/guides
 למדו כיצד להקים אקווריום מושלם, לטפל בזוחלים ולשמור על איכות מים מעולה. מדריכים מפורטים מאנשי מקצוע לכל רמת ניסיון. התחילו לקרוא עכשיו!
 
 ### צור קשר
-https://example.com/contact
+https://idron-co2.zappy5.app/contact
 הצוות המומחה שלנו כאן לענות על כל שאלה בנושא אקווריומים וזוחלים. קבלו ייעוץ אישי והמלצות מותאמות. צרו קשר עכשיו ונחזור אליכם במהירות!
 
 ### Products
-https://example.com/products
+https://idron-co2.zappy5.app/products
 המוצרים שלנו - Idron.co2
 
 ### Cart
-https://example.com/cart
+https://idron-co2.zappy5.app/cart
 עגלת הקניות שלך
 
 ### Checkout
-https://example.com/checkout
+https://idron-co2.zappy5.app/checkout
 תשלום
 
 ### Login
-https://example.com/login
+https://idron-co2.zappy5.app/login
 התחברות לקוחות
 
 ### Account
-https://example.com/account
+https://idron-co2.zappy5.app/account
 החשבון שלי
 
 ### Order Success
-https://example.com/order-success
+https://idron-co2.zappy5.app/order-success
 תודה על ההזמנה
 
 ### Product Detail
-https://example.com/product/:slug
+https://idron-co2.zappy5.app/product/:slug
 פרטי המוצר - Idron.co2
 
 ### Category
-https://example.com/category/:slug
+https://idron-co2.zappy5.app/category/:slug
 מוצרים - Idron.co2
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://example.com/privacy
+https://idron-co2.zappy5.app/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://example.com/terms
+https://idron-co2.zappy5.app/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://example.com/accessibility
+https://idron-co2.zappy5.app/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About Business
+## About Idron.co2
+Idron.co2 is a business in the חיות מחמד וציוד לבעלי חיים industry.
+
+## Target Audience
+- חובבי זוחלים ודגים
+- בעלי חנויות לחיות מחמד
+- חובבי אקווריומים
+- בעלי חיות מחמד אקזוטיות
+
+## Industry
+חיות מחמד וציוד לבעלי חיים
+
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://example.com/sitemap.xml
-- **Robots.txt**: https://example.com/robots.txt
+- **Sitemap**: https://idron-co2.zappy5.app/sitemap.xml
+- **Robots.txt**: https://idron-co2.zappy5.app/robots.txt
