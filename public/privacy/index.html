@@ -3,10 +3,10 @@
             (function() {
               function initMobileMenuToggles() {
                 // Only run on mobile
-                if (window.innerWidth &gt; 768) {
+                if (window.innerWidth &amp;amp;gt; 768) {
                   // Remove any toggle buttons on desktop
-                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn =&gt; btn.remove());
-                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu =&gt; {
+                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn =&amp;amp;gt; btn.remove());
+                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu =&amp;amp;gt; {
                     menu.classList.remove('mobile-expanded');
                   });
                   console.log('[MOBILE MENU] Desktop mode - cleanup done');
@@ -29,7 +29,7 @@
                   }
                   
                   const submenu = li.querySelector('.sub-menu');
-                  const parentLink = li.querySelector(':scope &gt; a') || li.querySelector(':scope &gt; .menu-group-title');
+                  const parentLink = li.querySelector(':scope &amp;amp;gt; a') || li.querySelector(':scope &amp;amp;gt; .menu-group-title');
                   
                   if (!submenu || !parentLink) return;
                   
@@ -89,7 +89,7 @@
               // This handles cases where the mobile menu is hidden initially
               const observer = new MutationObserver(function(mutations) {
                 mutations.forEach(function(mutation) {
-                  if (mutation.type === 'attributes' &amp;&amp; mutation.attributeName === 'class') {
+                  if (mutation.type === 'attributes' &amp;amp;amp;&amp;amp;amp; mutation.attributeName === 'class') {
                     const target = mutation.target;
                     if (target.classList.contains('active') || target.style.display !== 'none') {
                       console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
