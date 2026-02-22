@@ -140,7 +140,7 @@
 --primary: #0000CC;
   --secondary: #FFF566;
   --accent: #66FF66;
-  --bg-light: #3333FF;
+  --bg-light: #C0FFC0;
   --bg-dark: #062F2D;
   --text-dark: #111827;
   --text-light: #F9FAFB;
@@ -163,7 +163,7 @@
   --primary-color: #0000CC;
   --secondary-color: #FFF566;
   --accent-color: #66FF66;
-  --background-color: #3333FF;
+  --background-color: #C0FFC0;
   --surface-color: #F8FAFC;
   --text-color: #4A4A4A;
   --text-secondary-color: #8C8C8C;
@@ -512,7 +512,7 @@ select {
   --primary: #0000CC;
   --secondary: #FFF566;
   --accent: #66FF66;
-  --bg-light: #3333FF;
+  --bg-light: #C0FFC0;
   --bg-dark: #062F2D;
   --text-dark: #111827;
   --text-light: #F9FAFB;
@@ -723,7 +723,7 @@ select {
   --primary: #0000CC;
   --secondary: #FFF566;
   --accent: #66FF66;
-  --bg-light: #3333FF;
+  --bg-light: #C0FFC0;
   --bg-dark: #062F2D;
   --text-dark: #111827;
   --text-light: #F9FAFB;
@@ -1552,7 +1552,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   --primary: #0000CC;
   --secondary: #FFF566;
   --accent: #66FF66;
-  --bg-light: #3333FF;
+  --bg-light: #C0FFC0;
   --bg-dark: #062F2D;
   --text-dark: #111827;
   --text-light: #F9FAFB;
