@@ -137,7 +137,7 @@
   src: url('assets/fonts/Rubik-Bold.woff2') format('woff2');
 }
 :root {
---primary: #99FFFF;
+--primary: #0000CC;
   --secondary: #FFF566;
   --accent: #00FFFF;
   --bg-light: #FFFFFF;
@@ -160,7 +160,7 @@
   --font-heading: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --font-body: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
-  --primary-color: #99FFFF;
+  --primary-color: #0000CC;
   --secondary-color: #FFF566;
   --accent-color: #00FFFF;
   --background-color: #FFFFFF;
@@ -509,7 +509,7 @@ select {
 
 /* Navbar Styles */
 :root {
-  --primary: #99FFFF;
+  --primary: #0000CC;
   --secondary: #FFF566;
   --accent: #00FFFF;
   --bg-light: #FFFFFF;
@@ -720,7 +720,7 @@ select {
   }
 }
 :root {
-  --primary: #99FFFF;
+  --primary: #0000CC;
   --secondary: #FFF566;
   --accent: #00FFFF;
   --bg-light: #FFFFFF;
@@ -1549,7 +1549,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 
 /* Footer Styles */
 :root {
-  --primary: #99FFFF;
+  --primary: #0000CC;
   --secondary: #FFF566;
   --accent: #00FFFF;
   --bg-light: #FFFFFF;
@@ -5265,7 +5265,7 @@ main.page-container.ecommerce-page,
   transition: color 0.2s;
 }
 .checkout-item-remove:hover {
-  color: #99FFFF;
+  color: #0000CC;
 }
 
 /* ── Order Details Sidebar ── */
@@ -5346,14 +5346,14 @@ main.page-container.ecommerce-page,
 
 /* Validation error overrides (prevent theme color inheritance) */
 .field-error {
-  color: #99FFFF !important;
+  color: #0000CC !important;
   font-size: 12px !important;
 }
 .field-error.visible {
   display: block !important;
 }
 .checkout-accordion-body .input-wrapper input.input-error {
-  border-color: #99FFFF !important;
+  border-color: #0000CC !important;
   box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.1) !important;
 }
 
@@ -5595,10 +5595,10 @@ main.page-container.ecommerce-page,
   text-transform: uppercase;
 }
 .status-pending { background: #fef3c7; color: #92400e; }
-.status-paid { background: #d1fae5; color: #065f46; }
+.status-paid { background: #0000CC; color: #FFF566; }
 .status-processing { background: #dbeafe; color: #1e40af; }
 .status-shipped { background: #e0e7ff; color: #3730a3; }
-.status-delivered { background: #d1fae5; color: #065f46; }
+.status-delivered { background: #0000CC; color: #FFF566; }
 .status-cancelled { background: #fee2e2; color: #991b1b; }
 .order-info-row {
   display: flex;
@@ -5723,7 +5723,7 @@ main.page-container.ecommerce-page,
   font-size: 0.75rem;
 }
 .btn-icon:hover { color: var(--primary); }
-.btn-icon.btn-delete:hover { color: #99FFFF; }
+.btn-icon.btn-delete:hover { color: #0000CC; }
 .btn-icon svg { width: 16px; height: 16px; }
 
 /* Address modal */
@@ -5814,7 +5814,7 @@ main.page-container.ecommerce-page,
 }
 .toast.show { opacity: 1; }
 .toast.success { background: #059669; color: #fff; }
-.toast.error { background: #99FFFF; color: #fff; }
+.toast.error { background: #0000CC; color: #fff; }
 
 @media (max-width: 640px) {
   .profile-field { flex-direction: column; gap: 4px; }
@@ -6202,8 +6202,8 @@ main.page-container.ecommerce-page,
   margin-top: 12px;
 }
 .coupon-badge {
-  background: #d1fae5;
-  color: #065f46;
+  background: #0000CC;
+  color: #FFF566;
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -6212,13 +6212,13 @@ main.page-container.ecommerce-page,
 .coupon-remove-btn {
   background: none;
   border: none;
-  color: #99FFFF;
+  color: #0000CC;
   cursor: pointer;
   font-size: 0.85rem;
 }
 .coupon-remove-btn:hover { text-decoration: underline; }
 .coupon-error {
-  color: #99FFFF;
+  color: #0000CC;
   font-size: 0.85rem;
   margin-top: 8px;
 }
@@ -6374,7 +6374,7 @@ main.page-container.ecommerce-page,
 .cart-drawer-item-remove {
   background: none;
   border: none;
-  color: #99FFFF;
+  color: #0000CC;
   cursor: pointer;
   font-size: 0.8rem;
   margin-top: 8px;
@@ -6566,12 +6566,12 @@ main.page-container.ecommerce-page,
   color: var(--primary) !important; 
 }
 .cart-link.nav-cart .cart-count { 
-  background: var(--accent, #99FFFF) !important; 
+  background: var(--accent, #0000CC) !important; 
   color: #fff !important; 
 }
 .cart-link.nav-cart:hover .cart-count { 
   background: #FFFFFF !important; 
-  color: var(--accent, #99FFFF) !important; 
+  color: var(--accent, #0000CC) !important; 
 }
 
 /* Login link - V2 themed */
@@ -6972,7 +6972,7 @@ html[lang="ar"] .mobile-search-panel .search-wrapper,
     align-items: center !important;
     justify-content: center !important;
     padding: 0 4px !important;
-    background: var(--accent, #99FFFF) !important;
+    background: var(--accent, #0000CC) !important;
     color: #fff !important;
   }
 }
@@ -7077,7 +7077,7 @@ html[lang="ar"] .mobile-search-panel .search-wrapper,
     top: -6px !important;
     inset-inline-end: -6px !important;
     inset-inline-start: auto !important;
-    background: var(--accent, #99FFFF) !important;
+    background: var(--accent, #0000CC) !important;
     color: #fff !important;
     font-size: 10px !important;
     font-weight: 700 !important;
@@ -7630,7 +7630,7 @@ nav.navbar .menu-item-has-children::after,
 
   /* Ensure cart badge uses accent (some sites have --primary == bg) */
   .cart-count {
-    background: var(--accent, #99FFFF) !important;
+    background: var(--accent, #0000CC) !important;
     color: #fff !important;
   }
 }
