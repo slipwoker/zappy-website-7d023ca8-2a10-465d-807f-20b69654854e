@@ -268,8 +268,8 @@
             }
             
             /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
-            .nav-menu > li > .menu-group-title,
-            #navMenu > li > .menu-group-title {
+            .nav-menu &gt; li &gt; .menu-group-title,
+            #navMenu &gt; li &gt; .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -283,13 +283,13 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu > li > .menu-group-title:hover,
-            #navMenu > li > .menu-group-title:hover {
+            .nav-menu &gt; li &gt; .menu-group-title:hover,
+            #navMenu &gt; li &gt; .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
             }
             
             /* Desktop: show submenu on Menu Group hover */
-            li:has(.menu-group-title):hover > .sub-menu {
+            li:has(.menu-group-title):hover &gt; .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -298,7 +298,7 @@
             
             /* Hide menu items marked as hidden (overrides hover states) */
             .zappy-hidden-menu-item,
-            li:has(.menu-group-title):hover > .sub-menu .zappy-hidden-menu-item {
+            li:has(.menu-group-title):hover &gt; .sub-menu .zappy-hidden-menu-item {
               display: none !important;
               opacity: 0 !important;
               visibility: hidden !important;
@@ -351,9 +351,9 @@
             }
             
             /* Show submenu on parent hover - more specific selectors */
-            .nav-menu li:hover > .sub-menu,
-            nav li:hover > .sub-menu,
-            .navbar li:hover > .sub-menu {
+            .nav-menu li:hover &gt; .sub-menu,
+            nav li:hover &gt; .sub-menu,
+            .navbar li:hover &gt; .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -391,8 +391,8 @@
             }
             
             /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
-            .nav-menu > li > .menu-group-title,
-            #navMenu > li > .menu-group-title {
+            .nav-menu &gt; li &gt; .menu-group-title,
+            #navMenu &gt; li &gt; .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -406,8 +406,8 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu > li > .menu-group-title:hover,
-            #navMenu > li > .menu-group-title:hover {
+            .nav-menu &gt; li &gt; .menu-group-title:hover,
+            #navMenu &gt; li &gt; .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
               background-color: transparent !important;
             }
@@ -448,18 +448,18 @@
               }
               
               /* Disable hover behavior on mobile */
-              .nav-menu li:hover > .sub-menu,
-              nav li:hover > .sub-menu,
-              .navbar li:hover > .sub-menu {
+              .nav-menu li:hover &gt; .sub-menu,
+              nav li:hover &gt; .sub-menu,
+              .navbar li:hover &gt; .sub-menu {
                 opacity: 0;
                 visibility: hidden;
                 pointer-events: none;
               }
               
               /* Enable visibility for expanded submenus */
-              .nav-menu li > .sub-menu.mobile-expanded,
-              nav li > .sub-menu.mobile-expanded,
-              .navbar li > .sub-menu.mobile-expanded {
+              .nav-menu li &gt; .sub-menu.mobile-expanded,
+              nav li &gt; .sub-menu.mobile-expanded,
+              .navbar li &gt; .sub-menu.mobile-expanded {
                 opacity: 1 !important;
                 visibility: visible !important;
                 pointer-events: auto !important;
@@ -485,23 +485,23 @@
               }
               
               /* Parent link - takes most space, allows navigation */
-              .nav-menu li:has(.sub-menu) > a,
-              nav li:has(.sub-menu) > a,
-              .navbar li:has(.sub-menu) > a,
-              .nav-menu > li > .menu-group-title,
-              #navMenu > li > .menu-group-title {
+              .nav-menu li:has(.sub-menu) &gt; a,
+              nav li:has(.sub-menu) &gt; a,
+              .navbar li:has(.sub-menu) &gt; a,
+              .nav-menu &gt; li &gt; .menu-group-title,
+              #navMenu &gt; li &gt; .menu-group-title {
                 flex: 1 !important;
               }
               
               /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
-              .nav-menu li:has(.sub-menu) > a .fa-chevron-down,
-              .nav-menu li:has(.sub-menu) > a .fa-angle-down,
-              .nav-menu li:has(.sub-menu) > a [class*="chevron"],
-              .nav-menu li:has(.sub-menu) > a [class*="arrow"],
-              nav li:has(.sub-menu) > a [class*="chevron"],
-              nav li:has(.sub-menu) > a [class*="arrow"],
-              #navMenu li:has(.sub-menu) > a [class*="chevron"],
-              #navMenu li:has(.sub-menu) > a [class*="arrow"] {
+              .nav-menu li:has(.sub-menu) &gt; a .fa-chevron-down,
+              .nav-menu li:has(.sub-menu) &gt; a .fa-angle-down,
+              .nav-menu li:has(.sub-menu) &gt; a [class*="chevron"],
+              .nav-menu li:has(.sub-menu) &gt; a [class*="arrow"],
+              nav li:has(.sub-menu) &gt; a [class*="chevron"],
+              nav li:has(.sub-menu) &gt; a [class*="arrow"],
+              #navMenu li:has(.sub-menu) &gt; a [class*="chevron"],
+              #navMenu li:has(.sub-menu) &gt; a [class*="arrow"] {
                 display: none !important;
                 visibility: hidden !important;
               }
@@ -539,9 +539,9 @@
               }
               
               /* Submenu takes full width below parent */
-              .nav-menu li:has(.sub-menu) > .sub-menu,
-              nav li:has(.sub-menu) > .sub-menu,
-              .navbar li:has(.sub-menu) > .sub-menu {
+              .nav-menu li:has(.sub-menu) &gt; .sub-menu,
+              nav li:has(.sub-menu) &gt; .sub-menu,
+              .navbar li:has(.sub-menu) &gt; .sub-menu {
                 flex-basis: 100% !important;
                 width: 100% !important;
               }
@@ -561,10 +561,10 @@
             (function() {
               function initMobileMenuToggles() {
                 // Only run on mobile
-                if (window.innerWidth > 768) {
+                if (window.innerWidth &gt; 768) {
                   // Remove any toggle buttons on desktop
-                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove());
-                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
+                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn =&gt; btn.remove());
+                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu =&gt; {
                     menu.classList.remove('mobile-expanded');
                   });
                   console.log('[MOBILE MENU] Desktop mode - cleanup done');
@@ -587,7 +587,7 @@
                   }
                   
                   const submenu = li.querySelector('.sub-menu');
-                  const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
+                  const parentLink = li.querySelector(':scope &gt; a') || li.querySelector(':scope &gt; .menu-group-title');
                   
                   if (!submenu || !parentLink) return;
                   
@@ -647,7 +647,7 @@
               // This handles cases where the mobile menu is hidden initially
               const observer = new MutationObserver(function(mutations) {
                 mutations.forEach(function(mutation) {
-                  if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                  if (mutation.type === 'attributes' &amp;&amp; mutation.attributeName === 'class') {
                     const target = mutation.target;
                     if (target.classList.contains('active') || target.style.display !== 'none') {
                       console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
@@ -775,23 +775,138 @@
   </div>
 </section>
 
-    
-
-
-
-
-
+    <section class="featured-products-section" id="featured-products" data-zappy-dynamic="true">
+      <div class="container">
+        <h2 class="section-title">מוצרים מומלצים</h2>
+        <div class="product-grid featured-grid" id="zappy-featured-products">
+          <div class="loading-products">טוען מוצרים...</div>
+        </div>
+        <div class="view-all-products">
+          <a href="/products" class="btn btn-primary">צפה בכל המוצרים →</a>
+        </div>
+      </div>
+    </section>
   
 
-    
+    <section class="featured-categories-section" id="featured-categories" data-zappy-dynamic="true">
+      <div class="container">
+        <h2 class="section-title">קנו לפי קטגוריה</h2>
+        <div class="category-blocks" id="zappy-featured-categories">
+          <div class="loading-categories">טוען מוצרים...</div>
+        </div>
+      </div>
+    </section>
   
 
-
-
-<section class="home-editorial-section" data-layout-spec="בית-editorial" id="zappy-section-2">
-  <div class="home-editorial-image-column">
-      <div data-zappy-zoom-wrapper="true" data-element-id="img-1771781640642-3145s4r22" data-element-type="image" data-zappy-zoom-wrapper-width="1430px" data-zappy-zoom-wrapper-height="1915px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 1430px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 1915px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img data-placeholder="home-editorial-image-1" data-context="Calm living room interior with a beautifully maintained aquarium on a wooden stand, soft natural light coming through a window, green aquatic plants visible inside the tank, a few colorful fish swimming peacefully, minimalist Scandinavian-style decor, clean and serene atmosphere, professional lifestyle photography for a pet supplies store" width="600" height="800" src="/assets/site-home-editorial-image-1-1771781960599-gv2hjm.webp?v=1771781961797" alt="אקווריום מעוצב בסלון שקט" class="home-editorial-lifestyle-image zappy-editable-image" data-element-type="image" data-element-id="img-1771781640642-3145s4r22" data-original-position="static" style="position: absolute !important; object-fit: cover; object-position: 50% 50%; margin: 0px !important; left: -0.0048502% !important; top: 0% !important; width: 100.019% !important; height: 100% !important; max-width: none !important; max-height: none !important; display: block;" data-resize-handler-attached="true" data-zappy-zoom="1" data-zappy-original-width="1429.5999755859375" data-zappy-original-height="1915"></div>
+<section class="home-categories-section" data-layout-spec="בית-categories">
+  <div class="home-categories-container">
+    <div class="home-categories-header">
+      <h2>מצא את הציוד שלך, מהר</h2>
+      <p>התמצאות מהירה בין כל הציוד החיוני לזוחלים ודגי נוי – מאקווריומים ועד מערכות חימום מתקדמות</p>
     </div>
+    
+    <div class="home-categories-grid zappy-preserve-css-grid zappy-editable" style="display: grid; grid-template-columns: 584px 584px;" id="zappy-auto-grid-1771770725440-ssrwfd" data-zappy-auto-grid="true" data-original-item-width="584" data-original-gap="32px"><a href="#" class="home-category-card">
+        <div class="home-category-image-wrapper">
+          <img data-placeholder="home-categories-image-1" data-context="Modern glass aquarium with crystal clear water, colorful tropical fish swimming, aquatic plants, clean bright studio lighting on light gray background, professional product photography for pet store" width="600" height="400" src="/assets/site-home-categories-image-1.webp" alt="אקווריומים וטנקים לדגי נוי" data-element-type="image" data-element-id="img-1771770725407-546id5845" class="zappy-editable-image" data-original-position="static" style="position: relative;">
+        </div>
+        <div class="home-category-content" style="">
+          <br><br><br><br><br><br><br><br>
+            <svg data-element-type="icon" data-icon-type="svg" class="home-category-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="cursor: pointer;">
+              <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" fill="currentColor"></path>
+            </svg>
+            <h3 class="zappy-editable">אקווריומים וטנקים</h3>
+          
+          <p class="home-category-description zappy-editable">בחירה מושלמת לכל סוג דג – מצלילות קריסטלית ועיצוב שמשדרג כל פינה בבית</p>
+        </div>
+      </a><a href="#" class="home-category-card">
+        <div class="home-category-image-wrapper">
+          <img data-placeholder="home-categories-image-2" data-context="Professional aquarium filter system, water pump equipment, clear tubes and filtration media, clean modern design on light background, product photography for aquarium supplies store" width="600" height="400" src="/assets/site-home-categories-image-2.webp" alt="מערכות סינון וטיפול במים" data-element-type="image" data-element-id="img-1771770725407-tpgperxqw" class="zappy-editable-image" data-original-position="static" style="position: relative;">
+        </div>
+        <div class="home-category-content">
+          <div class="home-category-title-wrapper">
+            <svg data-element-type="icon" data-icon-type="svg" class="home-category-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" fill="currentColor"></path>
+            </svg>
+            <h3 class="zappy-editable">סינון וטיפול במים</h3>
+          </div>
+          <p class="home-category-description zappy-editable">מערכות סינון מתקדמות לאיכות מים יציבה – בריאות הדגים מתחילה במים נקיים</p>
+        </div>
+      </a><a href="#" class="home-category-card">
+        <div class="home-category-image-wrapper">
+          <div data-zappy-zoom-wrapper="true" data-element-id="img-1771770725407-kizvm4h8l" data-element-type="image" data-zappy-zoom-wrapper-width="612px" data-zappy-zoom-wrapper-height="252px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 612px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 252px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" class="zappy-resizable-hover"><img data-placeholder="home-categories-image-3" data-context="Glass terrarium habitat for reptiles with natural substrate, rocks, plants, climbing branches, modern clean design on light background, professional product photography for reptile pet store" width="600" height="400" src="/assets/site-home-categories-image-3.webp" alt="טרריומים ובתי גידול לזוחלים" data-element-type="image" data-element-id="img-1771770725407-kizvm4h8l" class="zappy-editable-image" data-original-position="static" style="object-position: 50% 50%; position: absolute !important; margin: 0px !important; left: 0% !important; top: -14.4933% !important; width: 100% !important; height: 128.987% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: fill !important;" data-zappy-zoom="0.7"></div>
+        </div>
+        <div class="home-category-content" style="">
+          <br><br><br><br><br><br><br><br>
+            <svg data-element-type="icon" data-icon-type="svg" class="home-category-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="cursor: pointer;">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z" fill="currentColor"></path>
+              <path d="M7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z" fill="currentColor"></path>
+            </svg>
+            <h3 class="zappy-editable">טרריומים ובתי גידול</h3>
+          
+          <p class="home-category-description zappy-editable">סביבת מחיה אידיאלית לזוחלים – נוחות מקסימלית ובטיחות מובנית לחיות שלך</p>
+        </div>
+      </a><a href="#" class="home-category-card">
+        <div class="home-category-image-wrapper">
+          <div data-zappy-zoom-wrapper="true" data-element-id="img-1771770725407-nc7br3xrc" data-element-type="image" data-zappy-zoom-wrapper-width="612px" data-zappy-zoom-wrapper-height="252px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 612px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 252px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" class=""><img data-placeholder="home-categories-image-4" data-context="Reptile heating lamp and UVB lighting equipment, temperature control devices, modern terrarium lighting setup on light background, professional product photography for pet supplies" width="600" height="400" src="/assets/site-home-categories-image-4.webp" alt="חימום ותאורה לזוחלים" data-element-type="image" data-element-id="img-1771770725407-nc7br3xrc" class="zappy-editable-image" data-original-position="static" style="position: absolute !important; object-position: 50% 50%; margin: 0px !important; left: -2.5% !important; top: -40.545% !important; width: 105% !important; height: 181.09% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: cover !important;" data-zappy-zoom="1.05"></div>
+        </div>
+        <div class="home-category-content">
+          <div class="home-category-title-wrapper" style="">
+            <svg data-element-type="icon" data-icon-type="svg" class="home-category-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="cursor: pointer;">
+              <path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.06 7 9.54 0 4.48-2.94 8.27-7 9.54.95.3 1.95.46 3 .46 5.52 0 10-4.48 10-10S14.52 2 9 2z" fill="currentColor"></path>
+              <circle cx="9" cy="12" r="2" fill="currentColor"></circle>
+            </svg>
+            <h3 class="zappy-editable">חימום ותאורה</h3>
+          </div>
+          <p class="home-category-description zappy-editable">שליטה מדויקת בטמפרטורה ותאורה – תנאים אופטימליים לבריאות ופעילות תקינה</p>
+        </div>
+      </a></div>
+  </div>
+  
+  <div class="home-categories-divider-wrapper">
+    <svg aria-hidden="true" viewbox="0 0 1200 80" preserveaspectratio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <lineargradient id="home-categories-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#FAFAF7;stop-opacity:1"></stop>
+          <stop offset="100%" style="stop-color:#E0F2F1;stop-opacity:1"></stop>
+        </lineargradient>
+      </defs>
+      <path d="M0,80 L0,50 L200,45 L400,52 L600,48 L800,54 L1000,50 L1200,45 L1200,80 Z" fill="url(#home-categories-gradient)"></path>
+    </svg>
+  </div>
+</section>
+
+<section class="home-editorial-section" data-layout-spec="בית-editorial">
+  <div class="home-editorial-container">
+    <div class="home-editorial-content-column">
+      <div class="home-editorial-header">
+        <h2>מדריכים שמסירים ניחושים</h2>
+        <p>כל מידע שאתם צריכים כדי לבחור נכון – מידות מדויקות, תאימות בין מוצרים, ושגרות בטוחות שמבטיחות סביבה בריאה לחיות שלכם.</p>
+      </div>
+
+      <article class="home-editorial-featured-guide">
+        <h3>בחירת מערכת סינון לפי נפח האקווריום</h3>
+        <p>מערכת סינון נכונה היא הבסיס לאקווריום יציב. כאשר אתם בוחרים מסנן, התאימו את הספיקה לנפח המים – לדוגמה, אקווריום של <span class="home-editorial-mono">60L</span> דורש מסנן שמסוגל לסנן לפחות <span class="home-editorial-mono">180L</span> לשעה (פי 3 מנפח הטנק).</p>
+        <p>לאקווריומים גדולים יותר, כמו <span class="home-editorial-mono">120L</span>, כדאי לשקול מסנן חיצוני (Canister) שמספק גם סינון מכני וגם ביולוגי חזק יותר. שימו לב לספק המסנן – רוב המסננים צורכים בין <span class="home-editorial-mono">6W</span> ל־<span class="home-editorial-mono">15W</span>, והם פועלים 24 שעות ביממה.</p>
+        <p>בנוסף, ודאו שיש לכם מספיק מדיה ביולוגית (ספוגים, חרוזי קרמיקה) כדי לאכלס חיידקים מועילים שמפרקים אמוניה וניטריטים. החלפת מדיה צריכה להתבצע בהדרגה – לעולם אל תחליפו את כל המדיה בבת אחת.</p>
+      </article>
+
+      <div class="home-editorial-small-guides">
+        <article class="home-editorial-small-guide">
+          <h3>חום ו־UV בסיסי לזוחלים נפוצים</h3>
+          <p>זוחלים צריכים נקודת חימום (basking spot) ואור UV-B כדי לסנתז ויטמין D3 ולספוג סידן. לדוגמה, דרקון מזוקן זקוק לטמפרטורה של 38–42°C בנקודת החימום ולמנורת UV-B 10.0. חלפו את מנורות ה־UV כל 6–12 חודשים, גם אם הן עדיין דולקות, כי הפליטה יורדת עם הזמן.</p>
+        </article>
+
+        <article class="home-editorial-small-guide">
+          <h3>שגרת החלפת מים ששומרת על דגים רגועים</h3>
+          <p>החליפו 20–25% מהמים כל שבוע במקום החלפה גדולה אחת בחודש. השתמשו במים בטמפרטורה זהה למים שבטנק, והוסיפו מייצב (dechlorinator) לפני שמזרימים את המים החדשים. שגרה קבועה מונעת מתח ומחלות, ושומרת על איזון פרמטרים כמו pH ורמות ניטראט.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="home-editorial-image-column">
+      <img data-placeholder="home-editorial-image-1" data-context="Calm living room interior with a beautifully maintained aquarium on a wooden stand, soft natural light coming through a window, green aquatic plants visible inside the tank, a few colorful fish swimming peacefully, minimalist Scandinavian-style decor, clean and serene atmosphere, professional lifestyle photography for a pet supplies store" width="600" height="800" src="/assets/site-home-editorial-image-1.webp" alt="אקווריום מעוצב בסלון שקט" class="home-editorial-lifestyle-image">
+    </div>
+  </div>
 
   <div class="home-editorial-divider-wrapper">
     <svg aria-hidden="true" viewbox="0 0 1200 80" preserveaspectratio="none" xmlns="http://www.w3.org/2000/svg">
@@ -801,19 +916,11 @@
   </div>
 </section>
 
-<section class="featured-products-section" id="featured-products" data-zappy-dynamic="true">
-      <div class="container">
-        <h2 class="section-title">מוצרים מומלצים</h2>
-        <div class="product-grid featured-grid" id="zappy-featured-products"><div class="product-card standard" data-product-id="c5d7bc75-0dea-4ba8-afb9-cfcb06ad90ed"><div class="product-tags"><span class="product-tag tag-featured">מומלץ</span><span class="product-tag tag-new">חדש</span><span class="product-tag">רב מכר</span></div><a data-zappy-click-action="link" href="/product/trryvm-454560-reptizoo-q5a8sh" style="text-decoration: none; color: inherit; display: contents;"><div data-zappy-zoom-wrapper="true" data-element-id="img-1771780463817-c2c5puln2" data-element-type="image" data-zappy-zoom-wrapper-width="238px" data-zappy-zoom-wrapper-height="180px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 238px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 180px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img src="/assets/product-enhanced-1771777567226-kzcbxh.webp" alt="טרריום 45*45*60 REPTIZOO" data-element-type="image" data-element-id="img-1771780463817-c2c5puln2" class="zappy-editable-image" data-resize-handler-attached="true" data-original-position="static" style="position: relative; object-fit: cover; object-position: 50% 50%; cursor: pointer; margin-top: 0px !important; margin-bottom: 0px !important; display: block;" data-zappy-zoom="1" data-zappy-click-action="link"></div></a></div></div>
-        <div class="view-all-products">
-          <a href="/products" class="btn btn-primary" data-element-type="button" data-element-id="btn-1771777834140-md9cknun3" data-native-element="true">צפה בכל המוצרים →</a>
-        </div>
-      </div>
-    </section><section class="home-stats-section" data-layout-spec="בית-stats">
+<section class="home-stats-section" data-layout-spec="בית-stats">
   <div class="home-stats-container">
     <div class="home-stats-header">
-      <h2>בנויים לטיפול בטוח בזוחלים ודגים</h2>
-      <p>אנחנו מאמינים שכל הזוחלים והדגים ראוי למידע ברור, ציוד אמין ותמיכה מקצועית. הנתונים שלנו משקפים את המחויבות שלנו לספק חוויה מצוינת לכל לקוח.</p>
+      <h2>בנויים לטיפול בטוח בחיות מחמד</h2>
+      <p>אנחנו מאמינים שכל בעל חיית מחמד ראוי למידע ברור, ציוד אמין ותמיכה מקצועית. הנתונים שלנו משקפים את המחויבות שלנו לספק חוויה מצוינת לכל לקוח.</p>
     </div>
     
     <div class="home-stats-grid">
@@ -887,14 +994,14 @@
         <h3 class="footer-title">יצירת קשר</h3>
         <ul class="footer-contact">
           <li>
-            <i class="fas fa-envelope" data-element-type="icon" data-element-id="icon-1771782425286-xsakizajf" data-icon-type="fontawesome"></i>
+            <i class="fas fa-envelope"></i>
             <a href="mailto:info@idron.store">info@idron.store</a>
           </li>
           <li>
-            <i class="fas fa-phone" data-element-type="icon" data-element-id="icon-1771782425286-8xvu4rvac" data-icon-type="fontawesome"></i>
+            <i class="fas fa-phone"></i>
             <a href="tel:+972555700815">+972555700815</a>
           </li>
-          <li><a href="/"><i class="fas fa-map-marker-alt" data-element-type="icon" data-element-id="icon-1771782425286-3p7uvdyfl" data-icon-type="fontawesome"></i>
+          <li><a href="/"><i class="fas fa-map-marker-alt"></i>
             <span>ישראל</span></a></li>
         </ul>
       </div>
@@ -904,7 +1011,7 @@
         <div class="social-links">
           <a href="#" aria-label="Facebook" style="display:none !important;"><i class="fab fa-facebook-f"></i></a>
           <a href="#" aria-label="Instagram" style="display:none !important;"><i class="fab fa-instagram"></i></a>
-          <a href="https://wa.me/51972555700815" aria-label="WhatsApp"><div class="zappy-icon-alignment-wrapper" style="display: flex; width: 100%; justify-content: center;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="41" height="41" viewbox="0 0 256 258" data-icon="logos:whatsapp-icon" data-iconify="logos:whatsapp-icon" data-element-type="icon" data-element-id="icon-1771782425286-prly1xdww" data-icon-type="iconify" data-size-adjusted="true" style="width: 41px !important; height: 41px !important; display: inline-block; vertical-align: -0.125em; color: rgb(249, 250, 251);" class="iconify iconify--logos"><defs><lineargradient id="IconifyId19c867644a2ade030" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#1FAF38"></stop><stop offset="100%" stop-color="#60D669"></stop></lineargradient><lineargradient id="IconifyId19c867644a2ade031" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#F9F9F9"></stop><stop offset="100%" stop-color="#FFF"></stop></lineargradient></defs><path fill="url(#IconifyId19c867644a2ade030)" d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004"></path><path fill="url(#IconifyId19c867644a2ade031)" d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z"></path><path fill="#FFF" d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64"></path></svg></div></a>
+          <a href="https://wa.me/51972555700815" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
     </div>

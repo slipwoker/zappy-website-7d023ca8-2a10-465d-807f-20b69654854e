@@ -281,8 +281,8 @@
             }
             
             /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
-            .nav-menu &amp;gt; li &amp;gt; .menu-group-title,
-            #navMenu &amp;gt; li &amp;gt; .menu-group-title {
+            .nav-menu &amp;amp;amp;amp;gt; li &amp;amp;amp;amp;gt; .menu-group-title,
+            #navMenu &amp;amp;amp;amp;gt; li &amp;amp;amp;amp;gt; .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -296,13 +296,13 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu &amp;gt; li &amp;gt; .menu-group-title:hover,
-            #navMenu &amp;gt; li &amp;gt; .menu-group-title:hover {
+            .nav-menu &amp;amp;amp;amp;gt; li &amp;amp;amp;amp;gt; .menu-group-title:hover,
+            #navMenu &amp;amp;amp;amp;gt; li &amp;amp;amp;amp;gt; .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
             }
             
             /* Desktop: show submenu on Menu Group hover */
-            li:has(.menu-group-title):hover &amp;gt; .sub-menu {
+            li:has(.menu-group-title):hover &amp;amp;amp;amp;gt; .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -311,7 +311,7 @@
             
             /* Hide menu items marked as hidden (overrides hover states) */
             .zappy-hidden-menu-item,
-            li:has(.menu-group-title):hover &amp;gt; .sub-menu .zappy-hidden-menu-item {
+            li:has(.menu-group-title):hover &amp;amp;amp;amp;gt; .sub-menu .zappy-hidden-menu-item {
               display: none !important;
               opacity: 0 !important;
               visibility: hidden !important;
@@ -364,9 +364,9 @@
             }
             
             /* Show submenu on parent hover - more specific selectors */
-            .nav-menu li:hover &amp;gt; .sub-menu,
-            nav li:hover &amp;gt; .sub-menu,
-            .navbar li:hover &amp;gt; .sub-menu {
+            .nav-menu li:hover &amp;amp;amp;amp;gt; .sub-menu,
+            nav li:hover &amp;amp;amp;amp;gt; .sub-menu,
+            .navbar li:hover &amp;amp;amp;amp;gt; .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -404,8 +404,8 @@
             }
             
             /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
-            .nav-menu &amp;gt; li &amp;gt; .menu-group-title,
-            #navMenu &amp;gt; li &amp;gt; .menu-group-title {
+            .nav-menu &amp;amp;amp;amp;gt; li &amp;amp;amp;amp;gt; .menu-group-title,
+            #navMenu &amp;amp;amp;amp;gt; li &amp;amp;amp;amp;gt; .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -419,8 +419,8 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu &amp;gt; li &amp;gt; .menu-group-title:hover,
-            #navMenu &amp;gt; li &amp;gt; .menu-group-title:hover {
+            .nav-menu &amp;amp;amp;amp;gt; li &amp;amp;amp;amp;gt; .menu-group-title:hover,
+            #navMenu &amp;amp;amp;amp;gt; li &amp;amp;amp;amp;gt; .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
               background-color: transparent !important;
             }
@@ -461,18 +461,18 @@
               }
               
               /* Disable hover behavior on mobile */
-              .nav-menu li:hover &amp;gt; .sub-menu,
-              nav li:hover &amp;gt; .sub-menu,
-              .navbar li:hover &amp;gt; .sub-menu {
+              .nav-menu li:hover &amp;amp;amp;amp;gt; .sub-menu,
+              nav li:hover &amp;amp;amp;amp;gt; .sub-menu,
+              .navbar li:hover &amp;amp;amp;amp;gt; .sub-menu {
                 opacity: 0;
                 visibility: hidden;
                 pointer-events: none;
               }
               
               /* Enable visibility for expanded submenus */
-              .nav-menu li &amp;gt; .sub-menu.mobile-expanded,
-              nav li &amp;gt; .sub-menu.mobile-expanded,
-              .navbar li &amp;gt; .sub-menu.mobile-expanded {
+              .nav-menu li &amp;amp;amp;amp;gt; .sub-menu.mobile-expanded,
+              nav li &amp;amp;amp;amp;gt; .sub-menu.mobile-expanded,
+              .navbar li &amp;amp;amp;amp;gt; .sub-menu.mobile-expanded {
                 opacity: 1 !important;
                 visibility: visible !important;
                 pointer-events: auto !important;
@@ -498,23 +498,23 @@
               }
               
               /* Parent link - takes most space, allows navigation */
-              .nav-menu li:has(.sub-menu) &amp;gt; a,
-              nav li:has(.sub-menu) &amp;gt; a,
-              .navbar li:has(.sub-menu) &amp;gt; a,
-              .nav-menu &amp;gt; li &amp;gt; .menu-group-title,
-              #navMenu &amp;gt; li &amp;gt; .menu-group-title {
+              .nav-menu li:has(.sub-menu) &amp;amp;amp;amp;gt; a,
+              nav li:has(.sub-menu) &amp;amp;amp;amp;gt; a,
+              .navbar li:has(.sub-menu) &amp;amp;amp;amp;gt; a,
+              .nav-menu &amp;amp;amp;amp;gt; li &amp;amp;amp;amp;gt; .menu-group-title,
+              #navMenu &amp;amp;amp;amp;gt; li &amp;amp;amp;amp;gt; .menu-group-title {
                 flex: 1 !important;
               }
               
               /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
-              .nav-menu li:has(.sub-menu) &amp;gt; a .fa-chevron-down,
-              .nav-menu li:has(.sub-menu) &amp;gt; a .fa-angle-down,
-              .nav-menu li:has(.sub-menu) &amp;gt; a [class*="chevron"],
-              .nav-menu li:has(.sub-menu) &amp;gt; a [class*="arrow"],
-              nav li:has(.sub-menu) &amp;gt; a [class*="chevron"],
-              nav li:has(.sub-menu) &amp;gt; a [class*="arrow"],
-              #navMenu li:has(.sub-menu) &amp;gt; a [class*="chevron"],
-              #navMenu li:has(.sub-menu) &amp;gt; a [class*="arrow"] {
+              .nav-menu li:has(.sub-menu) &amp;amp;amp;amp;gt; a .fa-chevron-down,
+              .nav-menu li:has(.sub-menu) &amp;amp;amp;amp;gt; a .fa-angle-down,
+              .nav-menu li:has(.sub-menu) &amp;amp;amp;amp;gt; a [class*="chevron"],
+              .nav-menu li:has(.sub-menu) &amp;amp;amp;amp;gt; a [class*="arrow"],
+              nav li:has(.sub-menu) &amp;amp;amp;amp;gt; a [class*="chevron"],
+              nav li:has(.sub-menu) &amp;amp;amp;amp;gt; a [class*="arrow"],
+              #navMenu li:has(.sub-menu) &amp;amp;amp;amp;gt; a [class*="chevron"],
+              #navMenu li:has(.sub-menu) &amp;amp;amp;amp;gt; a [class*="arrow"] {
                 display: none !important;
                 visibility: hidden !important;
               }
@@ -552,9 +552,9 @@
               }
               
               /* Submenu takes full width below parent */
-              .nav-menu li:has(.sub-menu) &amp;gt; .sub-menu,
-              nav li:has(.sub-menu) &amp;gt; .sub-menu,
-              .navbar li:has(.sub-menu) &amp;gt; .sub-menu {
+              .nav-menu li:has(.sub-menu) &amp;amp;amp;amp;gt; .sub-menu,
+              nav li:has(.sub-menu) &amp;amp;amp;amp;gt; .sub-menu,
+              .navbar li:has(.sub-menu) &amp;amp;amp;amp;gt; .sub-menu {
                 flex-basis: 100% !important;
                 width: 100% !important;
               }
@@ -574,10 +574,10 @@
             (function() {
               function initMobileMenuToggles() {
                 // Only run on mobile
-                if (window.innerWidth &amp;gt; 768) {
+                if (window.innerWidth &amp;amp;amp;amp;gt; 768) {
                   // Remove any toggle buttons on desktop
-                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn =&amp;gt; btn.remove());
-                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu =&amp;gt; {
+                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn =&amp;amp;amp;amp;gt; btn.remove());
+                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu =&amp;amp;amp;amp;gt; {
                     menu.classList.remove('mobile-expanded');
                   });
                   console.log('[MOBILE MENU] Desktop mode - cleanup done');
@@ -600,7 +600,7 @@
                   }
                   
                   const submenu = li.querySelector('.sub-menu');
-                  const parentLink = li.querySelector(':scope &amp;gt; a') || li.querySelector(':scope &amp;gt; .menu-group-title');
+                  const parentLink = li.querySelector(':scope &amp;amp;amp;amp;gt; a') || li.querySelector(':scope &amp;amp;amp;amp;gt; .menu-group-title');
                   
                   if (!submenu || !parentLink) return;
                   
@@ -660,7 +660,7 @@
               // This handles cases where the mobile menu is hidden initially
               const observer = new MutationObserver(function(mutations) {
                 mutations.forEach(function(mutation) {
-                  if (mutation.type === 'attributes' &amp;amp;&amp;amp; mutation.attributeName === 'class') {
+                  if (mutation.type === 'attributes' &amp;amp;amp;amp;amp;&amp;amp;amp;amp;amp; mutation.attributeName === 'class') {
                     const target = mutation.target;
                     if (target.classList.contains('active') || target.style.display !== 'none') {
                       console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
@@ -783,7 +783,7 @@
                 </div>
                 <div class="checkout-accordion-body">
                   <div class="checkout-login-prompt" id="checkout-login-prompt">
-                    <span>כבר יש לך חשבון?</span>&amp;nbsp;<a href="/login" class="checkout-login-link" id="checkout-login-link">התחבר כאן</a>
+                    <span>כבר יש לך חשבון?</span>&amp;amp;amp;amp;amp;nbsp;<a href="/login" class="checkout-login-link" id="checkout-login-link">התחבר כאן</a>
                   </div>
                   <div class="checkout-logged-in" id="checkout-logged-in" style="display: none;">
                     <div class="checkout-logged-in-text">
@@ -967,14 +967,14 @@
         <h3 class="footer-title">יצירת קשר</h3>
         <ul class="footer-contact">
           <li>
-            <i class="fas fa-envelope" data-element-type="icon" data-element-id="icon-1771782425286-xsakizajf" data-icon-type="fontawesome"></i>
+            <i class="fas fa-envelope"></i>
             <a href="mailto:info@idron.store">info@idron.store</a>
           </li>
           <li>
-            <i class="fas fa-phone" data-element-type="icon" data-element-id="icon-1771782425286-8xvu4rvac" data-icon-type="fontawesome"></i>
+            <i class="fas fa-phone"></i>
             <a href="tel:+972555700815">+972555700815</a>
           </li>
-          <li><a href="/"><i class="fas fa-map-marker-alt" data-element-type="icon" data-element-id="icon-1771782425286-3p7uvdyfl" data-icon-type="fontawesome"></i>
+          <li><a href="/"><i class="fas fa-map-marker-alt"></i>
             <span>ישראל</span></a></li>
         </ul>
       </div>
@@ -984,7 +984,7 @@
         <div class="social-links">
           <a href="#" aria-label="Facebook" style="display:none !important;"><i class="fab fa-facebook-f"></i></a>
           <a href="#" aria-label="Instagram" style="display:none !important;"><i class="fab fa-instagram"></i></a>
-          <a href="https://wa.me/51972555700815" aria-label="WhatsApp"><div class="zappy-icon-alignment-wrapper" style="display: flex; width: 100%; justify-content: center;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="41" height="41" viewbox="0 0 256 258" data-icon="logos:whatsapp-icon" data-iconify="logos:whatsapp-icon" data-element-type="icon" data-element-id="icon-1771782425286-prly1xdww" data-icon-type="iconify" data-size-adjusted="true" style="width: 41px !important; height: 41px !important; display: inline-block; vertical-align: -0.125em; color: rgb(249, 250, 251);" class="iconify iconify--logos"><defs><lineargradient id="IconifyId19c867644a2ade030" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#1FAF38"></stop><stop offset="100%" stop-color="#60D669"></stop></lineargradient><lineargradient id="IconifyId19c867644a2ade031" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#F9F9F9"></stop><stop offset="100%" stop-color="#FFF"></stop></lineargradient></defs><path fill="url(#IconifyId19c867644a2ade030)" d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004"></path><path fill="url(#IconifyId19c867644a2ade031)" d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z"></path><path fill="#FFF" d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64"></path></svg></div></a>
+          <a href="https://wa.me/51972555700815" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
     </div>
@@ -1030,11 +1030,11 @@
   </div>
 </aside>
   <script>
-  &amp;lt;!-- Search handling for e-commerce pages --&amp;gt;
+  &amp;amp;amp;amp;lt;!-- Search handling for e-commerce pages --&amp;amp;amp;amp;gt;
   (function() {
     // Unified search function that works in both preview and deployed modes
     function performSearch(query) {
-      if (query.length &amp;lt; 2) return;
+      if (query.length &amp;amp;amp;amp;lt; 2) return;
       
       // Check if we're in preview mode (URL contains preview-fullscreen)
       var isPreview = window.location.pathname.includes('preview-fullscreen');
@@ -1069,7 +1069,7 @@
     var searchToggle = document.querySelector('.nav-search-toggle');
     
     // Open mobile search panel
-    if (searchToggle &amp;amp;&amp;amp; mobileSearchPanel) {
+    if (searchToggle &amp;amp;amp;amp;amp;&amp;amp;amp;amp;amp; mobileSearchPanel) {
       searchToggle.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
@@ -1081,7 +1081,7 @@
     }
     
     // Close mobile search panel
-    if (closeMobileSearch &amp;amp;&amp;amp; mobileSearchPanel) {
+    if (closeMobileSearch &amp;amp;amp;amp;amp;&amp;amp;amp;amp;amp; mobileSearchPanel) {
       closeMobileSearch.addEventListener('click', function() {
         mobileSearchPanel.classList.remove('active');
         if (mobileSearchInput) mobileSearchInput.value = '';
