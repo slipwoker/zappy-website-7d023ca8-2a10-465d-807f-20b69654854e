@@ -139,7 +139,7 @@
 :root {
 --primary: #0000CC;
   --secondary: #FFF566;
-  --accent: #00FFFF;
+  --accent: #000000;
   --bg-light: #FFFFFF;
   --bg-dark: #062F2D;
   --text-dark: #111827;
@@ -162,7 +162,7 @@
   --font-mono: 'IBM Plex Mono', monospace;
   --primary-color: #0000CC;
   --secondary-color: #FFF566;
-  --accent-color: #00FFFF;
+  --accent-color: #000000;
   --background-color: #FFFFFF;
   --surface-color: #F8FAFC;
   --text-color: #4A4A4A;
@@ -511,7 +511,7 @@ select {
 :root {
   --primary: #0000CC;
   --secondary: #FFF566;
-  --accent: #00FFFF;
+  --accent: #000000;
   --bg-light: #FFFFFF;
   --bg-dark: #062F2D;
   --text-dark: #111827;
@@ -722,7 +722,7 @@ select {
 :root {
   --primary: #0000CC;
   --secondary: #FFF566;
-  --accent: #00FFFF;
+  --accent: #000000;
   --bg-light: #FFFFFF;
   --bg-dark: #062F2D;
   --text-dark: #111827;
@@ -1551,7 +1551,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 :root {
   --primary: #0000CC;
   --secondary: #FFF566;
-  --accent: #00FFFF;
+  --accent: #000000;
   --bg-light: #FFFFFF;
   --bg-dark: #062F2D;
   --text-dark: #111827;
