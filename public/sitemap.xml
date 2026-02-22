@@ -1,91 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://idron-co2.zappy5.app</loc>
+    <loc>https://idron.store</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://idron-co2.zappy5.app/categories</loc>
+    <loc>https://idron.store/products</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://idron-co2.zappy5.app/guides</loc>
+    <loc>https://idron.store/categories</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://idron-co2.zappy5.app/contact</loc>
+    <loc>https://idron.store/guides</loc>
+    <lastmod>2026-02-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://idron.store/cart</loc>
+    <lastmod>2026-02-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://idron.store/checkout</loc>
+    <lastmod>2026-02-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://idron.store/login</loc>
+    <lastmod>2026-02-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://idron.store/account</loc>
+    <lastmod>2026-02-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://idron.store/order-success</loc>
+    <lastmod>2026-02-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://idron.store/product/:slug</loc>
+    <lastmod>2026-02-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://idron.store/category/:slug</loc>
+    <lastmod>2026-02-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://idron.store/contact</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://idron-co2.zappy5.app/products</loc>
-    <lastmod>2026-02-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://idron-co2.zappy5.app/cart</loc>
-    <lastmod>2026-02-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://idron-co2.zappy5.app/checkout</loc>
-    <lastmod>2026-02-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://idron-co2.zappy5.app/login</loc>
-    <lastmod>2026-02-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://idron-co2.zappy5.app/account</loc>
-    <lastmod>2026-02-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://idron-co2.zappy5.app/order-success</loc>
-    <lastmod>2026-02-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://idron-co2.zappy5.app/product/:slug</loc>
-    <lastmod>2026-02-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://idron-co2.zappy5.app/category/:slug</loc>
-    <lastmod>2026-02-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://idron-co2.zappy5.app/privacy</loc>
-    <lastmod>2026-02-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://idron-co2.zappy5.app/terms</loc>
+    <loc>https://idron.store/privacy</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://idron-co2.zappy5.app/accessibility</loc>
+    <loc>https://idron.store/terms</loc>
+    <lastmod>2026-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://idron.store/accessibility</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

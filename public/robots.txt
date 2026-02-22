@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://idron-co2.zappy5.app/sitemap.xml
+Sitemap: https://idron.store/sitemap.xml
