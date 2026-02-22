@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>מדריכים מקצועיים לגידול דגים וזוחלים — Idron.co2</title>
+    <meta name="description" content="למדו כיצד להקים אקווריום מושלם, לטפל בזוחלים ולשמור על איכות מים מעולה. מדריכים מפורטים מאנשי מקצוע לכל רמת ניסיון. התחילו לקרוא עכשיו!">
+    <meta name="keywords" content="מדריכים לאקווריום, גידול דגי נוי, טיפול בזוחלים, הקמת טרריום, תחזוקת אקווריום">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <!-- Zappy Analytics -->
+<script>
+(function() {
+  'use strict';
+  
+  // Configuration
+  var config = {
+    websiteId: '7d023ca8-2a10-465d-807f-20b69654854e',
+    apiUrl: 'https://api.zappy5.com/api/analytics/track',
+    sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
+    trackPageViews: true,
+    trackClicks: true,
+    trackFormSubmissions: true
+  };
+  
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
+  function getSessionId() {
+    var sessionKey = 'zappy_session_' + config.websiteId;
+    var session = null;
+    
+    try {
+      session = sessionStorage.getItem(sessionKey);
+      if (session) {
+        var sessionData = JSON.parse(session);
+        var now = Date.now();
+        
+        // Check if session is still valid
+        if (now - sessionData.timestamp < config.sessionDuration) {
+          // Update timestamp
+          sessionData.timestamp = now;
+          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+          return sessionData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: SessionStorage not available');
+    }
+    
+    // Generate new session ID
+    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      sessionStorage.setItem(sessionKey, JSON.stringify({
+        id: newSessionId,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      // Continue without session storage
+    }
+    
+    return newSessionId;
+  }
+  
+  var visitorId = getVisitorId();
+  var sessionId = getSessionId();
+  
+  // Track an event
+  function trackEvent(eventType, data) {
+    data = data || {};
+    
+    var eventData = {
+      website_id: config.websiteId,
+      event_type: eventType,
+      page_path: window.location.pathname,
+      referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
+      session_id: sessionId,
+      metadata: data
+    };
+    
+    // Use sendBeacon if available (better for page unload events)
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+      navigator.sendBeacon(config.apiUrl, blob);
+    } else {
+      // Fallback to fetch
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData),
+        keepalive: true
+      }).catch(function(error) {
+        console.warn('Zappy Analytics: Failed to track event', error);
+      });
+    }
+  }
+  
+  // Track page view
+  if (config.trackPageViews) {
+    trackEvent('pageview', {
+      title: document.title,
+      url: window.location.href
+    });
+  }
+  
+  // Track clicks on important elements
+  if (config.trackClicks) {
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Track button clicks (counted as actions)
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        trackEvent('click', {
+          element: 'button',
+          text: button.textContent.trim().substring(0, 100),
+          id: button.id || null,
+          class: button.className || null
+        });
+      }
+      
+      // Track link clicks (navigation - not counted as actions)
+      else if (target.tagName === 'A' || target.closest('a')) {
+        var link = target.tagName === 'A' ? target : target.closest('a');
+        trackEvent('navigation', {
+          element: 'link',
+          text: link.textContent.trim().substring(0, 100),
+          href: link.href,
+          external: link.hostname !== window.location.hostname
+        });
+      }
+    }, true);
+  }
+  
+  // Track form submissions
+  if (config.trackFormSubmissions) {
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      
+      trackEvent('form_submit', {
+        form_id: form.id || null,
+        form_name: form.name || null,
+        form_action: form.action || null,
+        form_method: form.method || 'GET'
+      });
+    }, true);
+  }
+  
+  // Track time on page (send on page unload)
+  var pageLoadTime = Date.now();
+  
+  window.addEventListener('beforeunload', function() {
+    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
+    
+    trackEvent('page_unload', {
+      time_on_page: timeOnPage,
+      page_path: window.location.pathname
+    });
+  });
+  
+  // Expose tracking function globally for custom events
+  window.zappyAnalytics = {
+    track: trackEvent,
+    getVisitorId: function() { return visitorId; },
+    getSessionId: function() { return sessionId; }
+  };
+  
+})();
+</script>
+<!-- End Zappy Analytics -->
+    <meta property="og:title" content="מדריכים מקצועיים לגידול דגים וזוחלים — Idron.co2">
+  <meta property="og:description" content="למדו כיצד להקים אקווריום מושלם, לטפל בזוחלים ולשמור על איכות מים מעולה. מדריכים מפורטים מאנשי מקצוע לכל רמת ניסיון. התחילו לקרוא עכשיו!">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="he_IL">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="מדריכים מקצועיים לגידול דגים וזוחלים — Idron.co2">
+  <meta name="twitter:description" content="למדו כיצד להקים אקווריום מושלם, לטפל בזוחלים ולשמור על איכות מים מעולה. מדריכים מפורטים מאנשי מקצוע לכל רמת ניסיון. התחילו לקרוא עכשיו!">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <!-- Mickidum Accessibility Toolbar -->
+    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+    <link rel="stylesheet" href="/styles.css">
+
+    <style id="zappy-dropdown-submenu-styles">
+      /* ========== DESKTOP DROPDOWN SUBMENU STYLES ========== */
+      /* Base styles for dropdown submenus - parent must be positioned */
+      .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { position: relative; }
+      /* Submenu base - hidden by default */
+      .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { display: block !important; position: absolute !important; top: 100%; left: 0; min-width: 220px; background: white; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; list-style: none; pointer-events: none; }
+      /* CRITICAL: Desktop hover styles to show dropdown */
+      .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Submenu item styling */
+      .sub-menu li { list-style: none; margin: 0; padding: 0; }
+      .sub-menu a { display: block !important; padding: 10px 16px !important; color: #333 !important; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background-color 0.2s; }
+      .sub-menu a:hover { background-color: #f5f5f5; }
+      /* RTL (Hebrew/Arabic) dropdown positioning */
+      [dir="rtl"] .nav-menu .sub-menu, [dir="rtl"] nav .sub-menu, [dir="rtl"] .navbar .sub-menu, html[lang="he"] .nav-menu .sub-menu, html[lang="he"] nav .sub-menu, html[lang="he"] .navbar .sub-menu, html[lang="ar"] .nav-menu .sub-menu, html[lang="ar"] nav .sub-menu, html[lang="ar"] .navbar .sub-menu { left: auto !important; right: 0 !important; }
+      /* Hide empty dropdown menus */
+      .sub-menu:empty, .sub-menu:not(:has(li:not(.zappy-hidden-menu-item))), .sub-menu:not(:has(li)) { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
+      /* Desktop: show submenu on Menu Group hover */
+      li:has(.menu-group-title):hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Menu Group title styling */
+      .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { display: inline-block; padding: 0.5rem 1rem; cursor: default; user-select: none; }
+      
+      /* ========== MOBILE SUBMENU STYLES ========== */
+      @media (max-width: 768px) {
+        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { position: static !important; transform: none !important; box-shadow: none !important; background: transparent !important; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height 0.3s ease, opacity 0.3s ease; padding: 0 !important; border-radius: 0 !important; }
+        .sub-menu.mobile-expanded { max-height: 500px !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; }
+        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded { padding: 8px 16px 8px 0 !important; }
+        /* Disable hover behavior on mobile */
+        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 0; visibility: hidden; pointer-events: none; }
+        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
+        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { display: flex !important; flex-wrap: wrap !important; align-items: center !important; }
+        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a { flex: 1 !important; }
+        .nav-menu li:has(.sub-menu) > a [class*="chevron"], .nav-menu li:has(.sub-menu) > a [class*="arrow"], .nav-menu li:has(.sub-menu) > a .fa-chevron-down, .nav-menu li:has(.sub-menu) > a .fa-angle-down, nav li:has(.sub-menu) > a [class*="chevron"], nav li:has(.sub-menu) > a [class*="arrow"], #navMenu li:has(.sub-menu) > a [class*="chevron"], #navMenu li:has(.sub-menu) > a [class*="arrow"] { display: none !important; visibility: hidden !important; }
+        .mobile-submenu-toggle { display: flex !important; align-items: center !important; justify-content: center !important; width: 44px !important; height: 44px !important; background: transparent !important; border: none !important; cursor: pointer !important; }
+        .mobile-submenu-toggle::after { content: '' !important; width: 0 !important; height: 0 !important; border-left: 6px solid transparent !important; border-right: 6px solid transparent !important; border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important; }
+        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
+        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu { flex-basis: 100% !important; width: 100% !important; }
+        .sub-menu a { padding: 10px 0 !important; display: block !important; }
+        .nav-menu li:has(.sub-menu) > .menu-group-title, nav li:has(.sub-menu) > .menu-group-title, .navbar li:has(.sub-menu) > .menu-group-title, #navMenu li:has(.sub-menu) > .menu-group-title { flex: 1 !important; }
+      }
+      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
+    </style>
+
+    <style id="zappy-widget-visibility">
+      #mic-access-tool-general-button, .mic-access-tool-general-button,
+      #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
+      ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+      #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
+        display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+      }
+    </style>
+</head>
+<body>
+
+
+    <div class="mobile-search-panel" id="mobile-search-panel">
+      <div class="search-wrapper">
+        <input type="text" id="mobile-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
+        <button class="search-submit" id="mobile-search-submit" title="חיפוש">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </button>
+        <button class="close-search" id="close-mobile-search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="search-results" id="mobile-search-results"></div>
+    </div>
+  
+<script>window.ZAPPY_WEBSITE_ID = "7d023ca8-2a10-465d-807f-20b69654854e";window.ZAPPY_API_BASE = (window.location.pathname.includes('/preview') ? "https://api.zappy5.com" : "https://api.zappy5.com");</script>
+  <nav class="navbar" dir="rtl">
+  <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+    <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+    </svg>
+    <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display:none;">
+      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+    </svg>
+  </button>
+  
+  <button class="phone-header-btn" aria-label="Call">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+    </svg>
+  </button>
+  
+  <div class="nav-container">
+    <div class="nav-brand">
+      <a href="/" class="logo-link">
+        <img src="/assets/idron-co2-logo.webp" alt="Idron.co2" class="logo" />
+      </a>
+    </div>
+    
+    <ul class="nav-menu" id="navMenu">
+
+    <li class="menu-item-has-children zappy-products-dropdown">
+      <a href="/products">
+        מוצרים
+        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 9l6 6 6-6"></path>
+        </svg>
+      </a>
+      <ul class="sub-menu" id="zappy-nav-category-links">
+        <li><a href="/products">כל המוצרים</a></li>
+        <!-- Categories will be loaded dynamically -->
+      </ul>
+    </li>
+  <li><a href="/categories">קטגוריות</a></li><li><a href="/guides">מדריכים</a></li><li><a href="/contact">צור קשר</a></li></ul><div class="nav-ecommerce-icons nav-icons-left"><a href="/login" class="login-link nav-login" title="התחברות"><svg class="login-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a><a href="#cart" class="cart-link nav-cart" id="cart-drawer-toggle" title="עגלת קניות"><svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="cart-count">0</span></a><div class="nav-search-box">
+    <input type="text" class="nav-search-input" id="nav-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
+    <button class="nav-search-btn" id="nav-search-btn" title="חיפוש">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+    </button>
+    <div class="nav-search-results" id="nav-search-results"></div>
+  </div></div><div class="nav-ecommerce-icons nav-icons-right"><button class="nav-search-toggle" id="mobile-search-toggle" title="חיפוש"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></button></div>
+    
+    
+  </div>
+</nav>
+
+    <nav class="zappy-catalog-menu rtl" id="zappy-catalog-menu" dir="rtl">
+      <div class="catalog-menu-container">
+        <a href="/products" class="catalog-menu-item catalog-menu-all">כל המוצרים</a>
+        <div class="catalog-menu-categories" id="zappy-category-links">
+          <!-- Categories will be loaded dynamically -->
+        </div>
+      </div>
+    </nav>
+  
+  
+  <main>
+    <section class="guides-intro-section" data-layout-spec="מדריכים-intro">
+  <div class="guides-intro-container">
+    <div class="guides-intro-content">
+      <h1>מדריכים מעשיים לבעלי חיות מחמד</h1>
+      <p class="guides-intro-description">הצטרפו אלינו למסע מרתק בעולם האקווריומים והטרריומים. כאן תמצאו הסברים ברורים, שלב אחר שלב, שיעזרו לכם להקים ולתחזק סביבת מחיה אידיאלית לדגי הנוי והזוחלים שלכם. בין אם אתם מתחילים או מנוסים, המדריכים שלנו נועדו להפוך כל אתגר לחוויה פשוטה ומהנה.</p>
+      
+      <div class="guides-intro-highlights">
+        <div class="guides-intro-highlight-item">
+          <div class="guides-intro-highlight-icon">
+            <svg data-element-type="icon" data-icon-type="svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="14" width="24" height="14" rx="2" stroke="currentColor" stroke-width="2" fill="none"></rect>
+              <path d="M8 14V10C8 8.89543 8.89543 8 10 8H22C23.1046 8 24 8.89543 24 10V14" stroke="currentColor" stroke-width="2" fill="none"></path>
+              <circle cx="12" cy="20" r="2" fill="currentColor"></circle>
+              <circle cx="20" cy="22" r="1.5" fill="currentColor"></circle>
+              <path d="M8 28H24" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M14 18C14 18 16 16 18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
+            </svg>
+          </div>
+          <h3>יסודות האקווריום</h3>
+          <p>למדו כיצד לבחור את האקווריום המתאים, להתקין מערכות סינון ותאורה, ולהכין את המים בצורה הטובה ביותר עבור דגי הנוי שלכם. נסקור את כל השלבים החיוניים להקמת אקווריום בריא ומשגשג.</p>
+        </div>
+        
+        <div class="guides-intro-highlight-item">
+          <div class="guides-intro-highlight-icon">
+            <svg data-element-type="icon" data-icon-type="svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="12" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2" fill="none"></rect>
+              <path d="M10 12V8C10 6.89543 10.8954 6 12 6H20C21.1046 6 22 6.89543 22 8V12" stroke="currentColor" stroke-width="2" fill="none"></path>
+              <circle cx="14" cy="18" r="1.5" fill="currentColor"></circle>
+              <path d="M18 22C18 22 19 20 20 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
+              <path d="M12 24L14 22L16 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+              <line x1="10" y1="28" x2="22" y2="28" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+            </svg>
+          </div>
+          <h3>יסודות הטרריום</h3>
+          <p>גלו את הסודות להקמת טרריום מושלם לזוחלים. נדון בבחירת הגודל והחומרים הנכונים, התקנת מערכות חימום ותאורה UV, ויצירת סביבה טבעית ובטוחה שתאפשר לזוחלים שלכם לשגשג ולהתנהג באופן טבעי.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="guides-intro-divider-wrapper">
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,60 L0,35 Q100,28 200,35 T400,32 Q500,36 600,32 T800,35 Q900,30 1000,35 T1200,32 L1200,60 Z" fill="var(--bg-light)"></path>
+    </svg>
+  </div>
+</section>
+
+<section class="מדריכים-articles-section" data-layout-spec="מדריכים-articles">
+  <div class="מדריכים-articles-container">
+    <div class="מדריכים-articles-header">
+      <h2>מדריכים מקצועיים לטיפול באקווריומים וטרריומים</h2>
+      <p>כל מה שצריך לדעת על תחזוקה נכונה, בחירת ציוד ויצירת סביבה אידיאלית לחיות המחמד שלכם</p>
+    </div>
+
+    <div class="מדריכים-articles-grid">
+      <article class="מדריכים-article-card">
+        <div class="מדריכים-article-image-wrapper">
+          <img data-placeholder="מדריכים-articles-image-1" data-context="Clean freshwater aquarium with crystal clear water, green aquatic plants, colorful tropical fish swimming, showing proper cycling and water quality for pet fish care" width="600" height="400" src="/assets/site-articles-image-1.webp" alt="אקווריום מים מתוקים עם צמחייה ודגים">
+        </div>
+        <div class="מדריכים-article-content">
+          <h3>מחזור מים באקווריום מתוקים בצורה פשוטה</h3>
+          <p>למדו את השלבים החיוניים ליצירת מחזור חנקן יציב באקווריום חדש. התהליך לוקח בדרך כלל <span class="מדריכים-spec-text">21-28 ימים</span> ודורש ניטור יומיומי של רמות אמוניה, ניטריט וניטראט. נסביר כיצד לבנות קולוניית חיידקים מועילה שתשמור על איכות המים ובריאות הדגים לאורך זמן.</p>
+        </div>
+      </article>
+
+      <article class="מדריכים-article-card">
+        <div class="מדריכים-article-image-wrapper">
+          <img data-placeholder="מדריכים-articles-image-2" data-context="Different sizes of aquarium filters displayed with volume measurements, showing 60L, 120L, and 200L aquarium tanks with appropriate filtration equipment for pet fish" width="600" height="400" src="/assets/site-articles-image-2.webp" alt="מסננים לאקווריומים בגדלים שונים">
+        </div>
+        <div class="מדריכים-article-content">
+          <h3>בחירת מסנן לפי נפח האקווריום</h3>
+          <p>מדריך מקיף לבחירת מערכת סינון מתאימה: לאקווריום <span class="מדריכים-spec-text">60L</span> מומלץ מסנן פנימי בהספק <span class="מדריכים-spec-text">300 ליטר/שעה</span>, לאקווריום <span class="מדריכים-spec-text">120L</span> מסנן חיצוני <span class="מדריכים-spec-text">600 ליטר/שעה</span>, ולאקווריום גדול <span class="מדריכים-spec-text">200L</span> מסנן קנסטר <span class="מדריכים-spec-text">1000 ליטר/שעה</span>. נלמד על סוגי המדיה המסננת והחשיבות של זרימה נכונה.</p>
+        </div>
+      </article>
+
+      <article class="מדריכים-article-card">
+        <div class="מדריכים-article-image-wrapper">
+          <img data-placeholder="מדריכים-articles-image-3" data-context="Aquarium heater with digital thermostat display showing temperature control, safe installation in fish tank with tropical fish, precise temperature monitoring equipment" width="600" height="400" src="/assets/site-articles-image-3.webp" alt="תרמוסטט דיגיטלי לאקווריום">
+        </div>
+        <div class="מדריכים-article-content">
+          <h3>הגדרת חימום בטוח עם תרמוסטט</h3>
+          <p>שמירה על טמפרטורה יציבה חיונית לבריאות הדגים. נסביר כיצד לכייל תרמוסטט נכון לטווח <span class="מדריכים-spec-text">24-26°C</span> לדגים טרופיים, ולמקם את המחמם בזרימת מים טובה. חשוב להשתמש במחמם בהספק <span class="מדריכים-spec-text">3-5 וואט</span> לכל ליטר מים, ולבדוק את הטמפרטורה פעמיים ביום בשבועות הראשונים.</p>
+        </div>
+      </article>
+
+      <article class="מדריכים-article-card">
+        <div class="מדריכים-article-image-wrapper">
+          <img data-placeholder="מדריכים-articles-image-4" data-context="UV lighting setup in reptile terrarium showing different light types, bearded dragon or gecko basking under proper UVB lamp, temperature gradient visualization" width="600" height="400" src="/assets/site-articles-image-4.webp" alt="תאורת UV בטרריום לזוחלים">
+        </div>
+        <div class="מדריכים-article-content">
+          <h3>יסודות תאורת UV לפי מין</h3>
+          <p>זוחלים שונים דורשים עוצמות UV שונות: דרקונים מזוקנים זקוקים ל-<span class="מדריכים-spec-text">UVB 10-12%</span>, שממיות ל-<span class="מדריכים-spec-text">UVB 5-7%</span>, ונחשים רוב הזמן אינם דורשים UV כלל. נלמד על מרחק נכון של <span class="מדריכים-spec-text">25-30 ס"מ</span> מהמנורה, זמני תאורה של <span class="מדריכים-spec-text">10-12 שעות</span> ביום, והחשיבות של החלפת נורות כל 6-12 חודשים.</p>
+        </div>
+      </article>
+
+      <article class="מדריכים-article-card">
+        <div class="מדריכים-article-image-wrapper">
+          <img data-placeholder="מדריכים-articles-image-5" data-context="Comparison of aquarium substrates: clean sand, natural gravel, planted tank soil, showing cleanliness versus natural planted aquarium aesthetic for fish care" width="600" height="400" src="/assets/site-articles-image-5.webp" alt="סוגי מצעים לאקווריום">
+        </div>
+        <div class="מדריכים-article-content">
+          <h3>בחירת מצע: נקיון מול טבעיות</h3>
+          <p>חול דק בגודל <span class="מדריכים-spec-text">0.5-1 מ"מ</span> קל לניקוי אך לא מזין צמחים. חצץ בגודל <span class="מדריכים-spec-text">3-5 מ"מ</span> מאפשר זרימת מים טובה אך אוסף פסולת. אדמת אקווריום מספקת תזונה מצוינת לצמחים אך דורשת תחזוקה קפדנית. נשווה את היתרונות והחסרונות של כל סוג ונעזור לכם לבחור לפי סוג האקווריום.</p>
+        </div>
+      </article>
+
+      <article class="מדריכים-article-card">
+        <div class="מדריכים-article-image-wrapper">
+          <img data-placeholder="מדריכים-articles-image-6" data-context="Weekly aquarium maintenance routine showing water testing kit, algae scraper, water change equipment, filter cleaning supplies for proper fish tank care" width="600" height="400" src="/assets/site-articles-image-6.webp" alt="ציוד תחזוקה שבועית לאקווריום">
+        </div>
+        <div class="מדריכים-article-content">
+          <h3>צ'קליסט תחזוקה שבועית</h3>
+          <p>שגרת תחזוקה קבועה מבטיחה אקווריום בריא: החלפת <span class="מדריכים-spec-text">15-20%</span> מהמים מדי שבוע, בדיקת פרמטרי מים (pH, אמוניה, ניטריט), ניקוי זכוכית מאצות, שטיפת מדיית מסנן במים ישנים, ובדיקת בריאות הדגים. משימות חודשיות כוללות ניקוי עמוק של הציוד והחלפת פחם פעיל במסנן.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="מדריכים-articles-divider-wrapper">
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="מדריכים-divider-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#0B7F7A;stop-opacity:0.08"></stop>
+          <stop offset="50%" style="stop-color:#0B7F7A;stop-opacity:0.15"></stop>
+          <stop offset="100%" style="stop-color:#0B7F7A;stop-opacity:0.08"></stop>
+        </linearGradient>
+      </defs>
+      <path d="M0,80 L0,40 L1200,0 L1200,80 Z" fill="url(#מדריכים-divider-gradient)"></path>
+    </svg>
+  </div>
+</section>
+
+<section class="guides-process-section" data-layout-spec="מדריכים-process">
+  <div class="guides-process-container">
+    <div class="guides-process-intro">
+      <h2>תהליך החלטה רגוע ומושכל</h2>
+      <p>אנחנו מבינים שבחירת ציוד לחיות מחמד יכולה להיראות מורכבת. האמת? רוב ההחלטה היא התאמה פשוטה של מידות ומפרטים. אנחנו כאן כדי להפוך את התהליך לברור ונעים, צעד אחר צעד.</p>
+    </div>
+    
+    <div class="guides-process-steps">
+      <div class="guides-process-step-card">
+        <div class="guides-process-step-number">1</div>
+        <h3>מדוד את המרחב שלך</h3>
+        <p>התחל במדידה מדויקת של המקום המיועד: רוחב, גובה ועומק ב<span class="guides-process-unit">ס"מ</span>. שים לב לפינות, חלונות ושקעי חשמל. זה הבסיס לכל ההחלטות הבאות.</p>
+      </div>
+      
+      <div class="guides-process-step-card">
+        <div class="guides-process-step-number">2</div>
+        <h3>התאם למפרטים</h3>
+        <p>השווה את המידות שלך למפרטי המוצרים שלנו. שים לב לנפח ב<span class="guides-process-unit">ליטר</span> עבור אקווריומים, או לעוצמת תאורה ב<span class="guides-process-unit">W</span> עבור טרריומים. כל מוצר מגיע עם טבלת מפרטים מפורטת.</p>
+      </div>
+      
+      <div class="guides-process-step-card">
+        <div class="guides-process-step-number">3</div>
+        <h3>הוסף מרווח ביטחון</h3>
+        <p>תמיד השאר מרווח של לפחות <span class="guides-process-unit">5 ס"מ</span> מכל צד לאוורור ונגישות. זה מבטיח תחזוקה קלה יותר ומונע בעיות טכניות בעתיד. אל תשכח מקום לציוד נלווה כמו פילטרים ותאורה.</p>
+      </div>
+      
+      <div class="guides-process-step-card">
+        <div class="guides-process-step-number">4</div>
+        <h3>תחזוקה שוטפת</h3>
+        <p>אחרי ההתקנה, שמור על לוח זמנים קבוע: בדיקת איכות מים פעם ב<span class="guides-process-unit">7 ימים</span>, ניקוי פילטרים כל <span class="guides-process-unit">2-3 שבועות</span>, והחלפת מים חלקית חודשית. תיעוד פשוט יעזור לך לזכור.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="guides-process-divider-wrapper">
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="guides-process-card-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#E7E2DC;stop-opacity:0.4"></stop>
+          <stop offset="50%" style="stop-color:#E7E2DC;stop-opacity:0.7"></stop>
+          <stop offset="100%" style="stop-color:#E7E2DC;stop-opacity:0.4"></stop>
+        </linearGradient>
+      </defs>
+      <path d="M0,100 L0,30 Q0,20 10,20 L340,20 Q350,20 350,30 L350,80 Q350,90 360,90 L1190,90 Q1200,90 1200,100 Z" fill="url(#guides-process-card-gradient)"></path>
+      <path d="M0,100 L0,40 Q0,32 8,32 L330,32 Q338,32 338,40 L338,88 Q338,96 346,96 L1192,96 Q1200,96 1200,100 Z" fill="var(--bg-light)"></path>
+    </svg>
+  </div>
+</section>
+
+<section class="guides-testimonials-section" data-layout-spec="מדריכים-testimonials">
+  <div class="guides-testimonials-container">
+    <div class="guides-testimonials-header">
+      <h2>מהימנים על ידי חובבי אקווריומים יומיומיים</h2>
+      <p>הלקוחות שלנו מספרים על חוויות אמיתיות - מים צלולים יותר, טמפרטורה יציבה וביטחון בבחירת ציוד איכותי</p>
+    </div>
+    
+    <div class="guides-testimonials-grid">
+      <div class="guides-testimonial-card">
+        <h3>רונית כהן, חובבת דגי נוי</h3>
+        <p>"מאז שעברתי לפילטר שקניתי מכאן, המים באקווריום נשארים צלולים הרבה יותר זמן. הדגים נראים מרוצים והתחזוקה השבועית הפכה להרבה יותר פשוטה. ממליצה בחום!"</p>
+      </div>
+      
+      <div class="guides-testimonial-card">
+        <h3>יוסי לוי, מגדל זוחלים</h3>
+        <p>"התרמוסטט שרכשתי שומר על טמפרטורה יציבה בטרריום גם בחורף. אין יותר דאגות לגבי תנודות שיכולות להזיק לזוחלים שלי. השירות היה מקצועי והסבר מפורט."</p>
+      </div>
+      
+      <div class="guides-testimonial-card">
+        <h3>מיכל אברהם, מתחילה בתחום</h3>
+        <p>"כמישהי שהתחילה עכשיו עם אקווריום ראשון, הייתי מבולבלת מכל הציוד. הצוות פה עזר לי לבחור בדיוק מה שאני צריכה בלי להוציא יותר מדי. הרגשתי בטוחה בכל החלטה."</p>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+  
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-column footer-about">
+        <img src="/assets/idron-co2-logo.webp" alt="Idron.co2" class="logo" />
+        <p class="footer-description">החנות המובילה לציוד חיות מחמד בישראל. כל מה שחיית המחמד שלך צריכה במקום אחד.</p>
+      </div>
+      
+      <div class="footer-column">
+        <h3 class="footer-title">קישורים מהירים</h3>
+        <ul class="footer-links">
+          <li><a href="/categories">קטגוריות</a></li>
+          <li><a href="/guides">מדריכים</a></li>
+          <li><a href="/contact">צור קשר</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3 class="footer-title">יצירת קשר</h3>
+        <ul class="footer-contact">
+          <li>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:[business_email]">[business_email]</a>
+          </li>
+          <li>
+            <i class="fas fa-phone"></i>
+            <a href="tel:[business_phone]">[business_phone]</a>
+          </li>
+          <li><a href="/"><i class="fas fa-map-marker-alt"></i>
+            <span>[business_address]</span></a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3 class="footer-title">עקבו אחרינו</h3>
+        <div class="social-links">
+          <a href="[facebook_handle]" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="[instagram_handle]" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="[whatsapp_handle]" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <a href="/privacy">מדיניות פרטיות</a>
+        <span class="separator">|</span>
+        <a href="/terms">תנאי שימוש</a><span class="separator">|</span>
+            <a href="/return-policy" aria-label="מדיניות החזרות">
+              מדיניות החזרות
+            </a>
+        <span class="separator">|</span>
+        <a href="/accessibility">הצהרת נגישות</a>
+      </div>
+      <div class="footer-copyright">
+        <p>© 2026 Idron.co2. כל הזכויות שמורות.</p>
+      </div>
+      <div class="footer-attribution">
+        <a href="https://zappy5.com" target="_blank" class="zappy-attribution">Generated by Zappy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+  <a href="https://wa.me/[whatsapp_handle]" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  
+  <div data-integration="accessibility:toolbar"></div>
+
+    <script src="/script.js"></script>
+
+    <script id="zappy-mobile-submenu-script">
+    (function() {
+      function initMobileSubmenuToggles() {
+        if (window.innerWidth > 768) {
+          document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) { btn.remove(); });
+          document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) { menu.classList.remove('mobile-expanded'); });
+          return;
+        }
+        var items = document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)');
+        items.forEach(function(li) {
+          if (li.querySelector('.mobile-submenu-toggle')) return;
+          var submenu = li.querySelector('.sub-menu');
+          var parentLink = li.querySelector(':scope > a');
+          if (!submenu || !parentLink) return;
+          var toggleBtn = document.createElement('button');
+          toggleBtn.className = 'mobile-submenu-toggle';
+          toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+          toggleBtn.setAttribute('type', 'button');
+          parentLink.insertAdjacentElement('afterend', toggleBtn);
+          toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault(); e.stopPropagation();
+            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+              if (menu !== submenu) { menu.classList.remove('mobile-expanded'); var t = menu.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }
+            });
+            submenu.classList.toggle('mobile-expanded');
+            toggleBtn.classList.toggle('expanded');
+          });
+        });
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
+      else { initMobileSubmenuToggles(); }
+      var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+      // Re-initialize when mobile menu becomes visible (MutationObserver)
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes') {
+            var target = mutation.target;
+            if (target.classList && (target.classList.contains('active') || target.classList.contains('open'))) {
+              setTimeout(initMobileSubmenuToggles, 100);
+            }
+          }
+        });
+      });
+      setTimeout(function() {
+        document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu, nav').forEach(function(menu) {
+          observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
+        });
+      }, 500);
+    })();
+    </script>
+</body>
+</html>

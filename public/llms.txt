@@ -1,0 +1,79 @@
+# Business — Generative Engine Optimization Map
+
+---
+
+## Pages
+
+### בית
+https://example.com
+גלו מבחר אקווריומים וטרריומים לזוחלים בעיצוב ייחודי. ציוד איכותי לדגי נוי וזוחלים במחירים מעולים. הזמינו עכשיו והפכו את הבית לגן עדן טבעי!
+
+### קטגוריות
+https://example.com/categories
+סיווג מושלם של כל הציוד: אקווריומים, טרריומים, מזון, תאורה, מסננים ועוד. מצאו בקלות את כל מה שחיית המחמד שלכם צריכה. גלו את הקטגוריות שלנו!
+
+### מדריכים
+https://example.com/guides
+למדו כיצד להקים אקווריום מושלם, לטפל בזוחלים ולשמור על איכות מים מעולה. מדריכים מפורטים מאנשי מקצוע לכל רמת ניסיון. התחילו לקרוא עכשיו!
+
+### צור קשר
+https://example.com/contact
+הצוות המומחה שלנו כאן לענות על כל שאלה בנושא אקווריומים וזוחלים. קבלו ייעוץ אישי והמלצות מותאמות. צרו קשר עכשיו ונחזור אליכם במהירות!
+
+### Products
+https://example.com/products
+המוצרים שלנו - Idron.co2
+
+### Cart
+https://example.com/cart
+עגלת הקניות שלך
+
+### Checkout
+https://example.com/checkout
+תשלום
+
+### Login
+https://example.com/login
+התחברות לקוחות
+
+### Account
+https://example.com/account
+החשבון שלי
+
+### Order Success
+https://example.com/order-success
+תודה על ההזמנה
+
+### Product Detail
+https://example.com/product/:slug
+פרטי המוצר - Idron.co2
+
+### Category
+https://example.com/category/:slug
+מוצרים - Idron.co2
+
+## Legal & Policy
+
+### Privacy Policy
+https://example.com/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://example.com/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://example.com/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About Business
+---
+
+# Additional Resources
+
+- **Sitemap**: https://example.com/sitemap.xml
+- **Robots.txt**: https://example.com/robots.txt
