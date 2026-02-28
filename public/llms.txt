@@ -8,7 +8,7 @@
 https://idron.store
 גלו מבחר אקווריומים וטרריומים לזוחלים בעיצוב ייחודי. ציוד איכותי לדגי נוי וזוחלים במחירים מעולים. הזמינו עכשיו והפכו את הבית לגן עדן טבעי!
 
-### מוצרים
+### Products
 https://idron.store/products
 המוצרים שלנו - Idron.co2
 
@@ -16,31 +16,31 @@ https://idron.store/products
 https://idron.store/guides
 למדו כיצד להקים אקווריום מושלם, לטפל בזוחלים ולשמור על איכות מים מעולה. מדריכים מפורטים מאנשי מקצוע לכל רמת ניסיון. התחילו לקרוא עכשיו!
 
-### עגלת קניות
+### Cart
 https://idron.store/cart
 עגלת הקניות שלך
 
-### תשלום
+### Checkout
 https://idron.store/checkout
 תשלום
 
-### התחברות
+### Login
 https://idron.store/login
 התחברות לקוחות
 
-### החשבון שלי
+### Account
 https://idron.store/account
 החשבון שלי
 
-### ההזמנה התקבלה!
+### Order Success
 https://idron.store/order-success
 תודה על ההזמנה
 
-### פרטי המוצר
+### Product Detail
 https://idron.store/product/:slug
 פרטי המוצר - Idron.co2
 
-### מוצרים
+### Category
 https://idron.store/category/:slug
 מוצרים - Idron.co2
 
