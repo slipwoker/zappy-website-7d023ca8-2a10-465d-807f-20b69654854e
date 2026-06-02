@@ -1,0 +1,81 @@
+{
+  "@context": "https://schema.org",
+  "generated_at": "2026-06-02T18:17:53.104Z",
+  "base_url": "https://idron.store",
+  "currency": "USD",
+  "count": 3,
+  "products": [
+    {
+      "id": "da323cca-3dfb-44c8-af12-10f136a4131d",
+      "slug": "trryvm-212130-a9lhr4",
+      "name": "טרריום 21*21*30",
+      "name_translations": {},
+      "description": "",
+      "short_description": null,
+      "sku": null,
+      "brand": null,
+      "price": 280,
+      "base_price": 280,
+      "sale_price": 280,
+      "currency": "USD",
+      "images": [
+        "https://idron.store/assets/product-enhanced-1771775038626-ovs8eo.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://idron.store/product/trryvm-212130-a9lhr4",
+      "categories": [
+        "מוצרים לזוחלים"
+      ],
+      "updated_at": "2026-02-22T17:31:28.941Z"
+    },
+    {
+      "id": "2e108019-9c1d-419c-bc80-82352a2725c7",
+      "slug": "trryvm-313120-reptizoo-0z2u7y",
+      "name": "טרריום 31*31*20 REPTIZOO",
+      "name_translations": {},
+      "description": "",
+      "short_description": null,
+      "sku": null,
+      "brand": null,
+      "price": 333,
+      "base_price": 333,
+      "sale_price": 333,
+      "currency": "USD",
+      "images": [
+        "https://idron.store/assets/product-enhanced-1771777609765-3xkw6a.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://idron.store/product/trryvm-313120-reptizoo-0z2u7y",
+      "categories": [
+        "מוצרים לזוחלים"
+      ],
+      "updated_at": "2026-02-22T17:31:35.659Z"
+    },
+    {
+      "id": "c5d7bc75-0dea-4ba8-afb9-cfcb06ad90ed",
+      "slug": "trryvm-454560-reptizoo-ss8eku",
+      "name": "טרריום 45*45*60 REPTIZOO",
+      "name_translations": {},
+      "description": "",
+      "short_description": null,
+      "sku": null,
+      "brand": null,
+      "price": 949.99,
+      "base_price": 949,
+      "sale_price": 949.99,
+      "currency": "USD",
+      "images": [
+        "https://idron.store/assets/product-enhanced-1771777567226-kzcbxh.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://idron.store/product/trryvm-454560-reptizoo-ss8eku",
+      "categories": [
+        "מוצרים לזוחלים"
+      ],
+      "updated_at": "2026-02-22T17:31:42.312Z"
+    }
+  ]
+}

@@ -1,4 +1,6 @@
-# Business — Generative Engine Optimization Map
+# Idron.co2 — Generative Engine Optimization Map
+
+> A חיות מחמד וציוד לבעלי חיים business.
 
 ---
 
@@ -64,12 +66,53 @@ Information about WCAG compliance and accessibility features.
 
 ---
 
-# Business Context (for LLM understanding)
+## Products
 
-## About Business
+**Total active products: 3**
+
+### טרריום 21*21*30
+https://idron.store/product/trryvm-212130-a9lhr4
+- Price: 280.00 USD
+- Availability: In stock
+- Category: מוצרים לזוחלים
+- Image: https://idron.store/assets/product-enhanced-1771775038626-ovs8eo.webp
+
+### טרריום 31*31*20 REPTIZOO
+https://idron.store/product/trryvm-313120-reptizoo-0z2u7y
+- Price: 333.00 USD
+- Availability: In stock
+- Category: מוצרים לזוחלים
+- Image: https://idron.store/assets/product-enhanced-1771777609765-3xkw6a.webp
+
+### טרריום 45*45*60 REPTIZOO
+https://idron.store/product/trryvm-454560-reptizoo-ss8eku
+- Price: 949.99 USD
+- Availability: In stock
+- Category: מוצרים לזוחלים
+- Image: https://idron.store/assets/product-enhanced-1771777567226-kzcbxh.webp
+
 ---
 
-# Additional Resources
+# Business Context (for LLM understanding)
 
-- **Sitemap**: https://idron.store/sitemap.xml
-- **Robots.txt**: https://idron.store/robots.txt
+## About Idron.co2
+Idron.co2 is a business in the חיות מחמד וציוד לבעלי חיים industry.
+
+## Target Audience
+- חובבי זוחלים ודגים
+- בעלי חנויות לחיות מחמד
+- חובבי אקווריומים
+- בעלי חיות מחמד אקזוטיות
+
+## Industry
+חיות מחמד וציוד לבעלי חיים
+
+---
+
+# Machine-readable feeds
+
+- Sitemap (XML): https://idron.store/sitemap.xml
+- Robots: https://idron.store/robots.txt
+- Flattened page text (for LLMs): https://idron.store/llms-full.txt
+- Products (JSON): https://idron.store/products.json
+- Products (Google Merchant RSS): https://idron.store/product-feed.xml

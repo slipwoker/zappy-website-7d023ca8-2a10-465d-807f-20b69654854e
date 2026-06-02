@@ -219,13 +219,17 @@
 </script>
 <!-- End Zappy Analytics -->
     <meta property="og:title" content="אקווריומים וטרריומים מקצועיים למראה מושלם — Idron.co2">
-  <meta property="og:description" content="גלו מבחר אקווריומים וטרריומים לזוחלים בעיצוב ייחודי. ציוד איכותי לדגי נוי וזוחלים במחירים מעולים. הזמינו עכשיו והפכו את הבית לגן עדן טבעי!">
-  <meta property="og:type" content="website">
+    <meta property="og:description" content="גלו מבחר אקווריומים וטרריומים לזוחלים בעיצוב ייחודי. ציוד איכותי לדגי נוי וזוחלים במחירים מעולים. הזמינו עכשיו והפכו את הבית לגן עדן טבעי!">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="אקווריומים וטרריומים מקצועיים למראה מושלם — Idron.co2">
+    <meta name="twitter:description" content="גלו מבחר אקווריומים וטרריומים לזוחלים בעיצוב ייחודי. ציוד איכותי לדגי נוי וזוחלים במחירים מעולים. הזמינו עכשיו והפכו את הבית לגן עדן טבעי!">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://idron.store#organization","name":"Idron.co2","url":"https://idron.store","address":{"@type":"PostalAddress","streetAddress":",, הרצליה"},"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"info@idron.store","telephone":"+972555700815"}]},{"@type":"WebSite","@id":"https://idron.store#website","url":"https://idron.store","name":"Idron.co2","publisher":{"@id":"https://idron.store#organization"}}]}</script>
+    <meta property="og:type" content="website">
   <meta property="og:locale" content="he_IL">
   
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="אקווריומים וטרריומים מקצועיים למראה מושלם — Idron.co2">
-  <meta name="twitter:description" content="גלו מבחר אקווריומים וטרריומים לזוחלים בעיצוב ייחודי. ציוד איכותי לדגי נוי וזוחלים במחירים מעולים. הזמינו עכשיו והפכו את הבית לגן עדן טבעי!">
+  
+  
+  
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -667,11 +671,37 @@
     <link rel="stylesheet" href="/styles.css">
 
     <style id="zappy-widget-visibility">
-      #mic-access-tool-general-button, .mic-access-tool-general-button,
-      #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
-      ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
-      #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
-        display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+      html[dir="rtl"] .whatsapp-float { right: 20px !important; left: auto !important; }
+      html[dir="ltr"] .whatsapp-float, html:not([dir]) .whatsapp-float { left: 20px !important; right: auto !important; }
+      html[dir="rtl"] #mic-access-tool-general-button, html[dir="rtl"] .mic-access-tool-general-button,
+      html[dir="rtl"] #mic-init-access-tool .mic-access-tool-general-button,
+      html[dir="rtl"] #mic-init-access-tool #mic-access-tool-general-button,
+      html[dir="rtl"] ._access-icon { left: 20px !important; right: auto !important; }
+      html[dir="ltr"] #mic-access-tool-general-button, html[dir="ltr"] .mic-access-tool-general-button,
+      html[dir="ltr"] #mic-init-access-tool .mic-access-tool-general-button,
+      html[dir="ltr"] #mic-init-access-tool #mic-access-tool-general-button,
+      html[dir="ltr"] ._access-icon,
+      html:not([dir]) #mic-access-tool-general-button, html:not([dir]) .mic-access-tool-general-button,
+      html:not([dir]) #mic-init-access-tool .mic-access-tool-general-button,
+      html:not([dir]) #mic-init-access-tool #mic-access-tool-general-button,
+      html:not([dir]) ._access-icon { right: 20px !important; left: auto !important; }
+      @media (max-width: 768px) { .whatsapp-float { display: flex !important; } }
+      @media (min-width: 769px) { .whatsapp-float { display: flex !important; } }
+      @media (max-width: 768px) {
+        #mic-access-tool-general-button, .mic-access-tool-general-button,
+        #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
+        ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+        #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
+          display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+        }
+      }
+      @media (min-width: 769px) {
+        #mic-access-tool-general-button, .mic-access-tool-general-button,
+        #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
+        ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+        #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
+          display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+        }
       }
     </style>
 </head>
@@ -691,7 +721,7 @@
       <div class="search-results" id="mobile-search-results"></div>
     </div>
   
-<script>window.ZAPPY_WEBSITE_ID = "7d023ca8-2a10-465d-807f-20b69654854e";window.ZAPPY_API_BASE = (window.location.pathname.includes('/preview') ? "https://api.zappy5.com" : "https://api.zappy5.com");</script>
+<script>window.ZAPPY_WEBSITE_ID = "7d023ca8-2a10-465d-807f-20b69654854e";window.ZAPPY_API_BASE = "https://api.zappy5.com";</script>
   <nav class="navbar" dir="rtl">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
     <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -715,7 +745,9 @@
       </a>
     </div>
     
-    <ul class="nav-menu" id="navMenu"><li><a href="/" data-i18n="nav-home">בית</a></li><li class="menu-item-has-children zappy-products-dropdown">
+    <ul class="nav-menu" id="navMenu">
+
+    <li class="menu-item-has-children zappy-products-dropdown">
       <a href="/products">
         מוצרים
         <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -723,10 +755,11 @@
         </svg>
       </a>
       <ul class="sub-menu" id="zappy-nav-category-links">
-        <li><a href="/products">כל המוצרים</a></li>
+        <li><a href="/products" data-i18n="ecom_products">מוצרים</a></li>
         <!-- Categories will be loaded dynamically -->
       </ul>
-    </li><li><a href="/guides">מדריכים</a></li><li><a href="/contact">צור קשר</a></li></ul><div class="nav-ecommerce-icons nav-icons-left"><a href="/login" class="login-link nav-login" title="התחברות"><svg class="login-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a><a href="#cart" class="cart-link nav-cart" id="cart-drawer-toggle" title="עגלת קניות"><svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="cart-count">0</span></a><div class="nav-search-box">
+    </li>
+  <li><a href="/" data-i18n="nav-home">בית</a></li><li><a href="/guides">מדריכים</a></li><li><a href="/contact">צור קשר</a></li></ul><div class="nav-ecommerce-icons nav-icons-left"><a href="/login" class="login-link nav-login" title="התחברות"><svg class="login-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a><a href="#cart" class="cart-link nav-cart" id="cart-drawer-toggle" title="עגלת קניות"><svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="cart-count">0</span></a><div class="nav-search-box">
     <input type="text" class="nav-search-input" id="nav-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
     <button class="nav-search-btn" id="nav-search-btn" title="חיפוש">
       <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
@@ -1043,6 +1076,14 @@
   
   <div data-integration="accessibility:toolbar"></div>
 
+<div class="zappy-qv-overlay" id="zappy-qv-overlay" hidden></div>
+<div class="zappy-qv-modal" id="zappy-qv-modal" role="dialog" aria-modal="true" aria-label="תצוגה מהירה" hidden>
+  <button type="button" class="zappy-qv-close" id="zappy-qv-close" aria-label="סגור">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="zappy-qv-content" id="zappy-qv-content"></div>
+</div>
+
     <script src="/script.js"></script>
 
     <script id="zappy-mobile-submenu-script">
@@ -1106,16 +1147,22 @@
         // small wrappers (e.g. 139px logo wrappers) to their parent width, conflicting with
         // the correct stored dimensions.
       }
+      function _parsePos(s){var x=50,y=50;try{var m=(s||'').match(/(-?d+(?:.d+)?)%s+(-?d+(?:.d+)?)%/);if(m){x=parseFloat(m[1]);y=parseFloat(m[2]);}}catch(e){}if(!isFinite(x))x=50;if(!isFinite(y))y=50;return{x:Math.max(0,Math.min(100,x)),y:Math.max(0,Math.min(100,y))};}
+      function _coverPct(iA,cA){if(!isFinite(iA)||iA<=0||!isFinite(cA)||cA<=0)return{w:100,h:100};if(iA>=cA)return{w:(iA/cA)*100,h:100};return{w:100,h:(cA/iA)*100};}
       function applyMobile(){
         if(_applied)return;_applied=true;
         document.querySelectorAll('[data-zappy-zoom-wrapper="true"]').forEach(function(w){
+          if(_isHeroBg(w))return;
           var cw=w.style.getPropertyValue('width');
-          if(!cw||cw==='100%')return;
+          var _sW=parseFloat(w.getAttribute('data-zappy-zoom-wrapper-width'))||0;
+          var _sH=parseFloat(w.getAttribute('data-zappy-zoom-wrapper-height'))||0;
+          if(!cw&&!(_sW>0&&_sH>0))return;
           if(!w._zappyDesktop)w._zappyDesktop={wStyle:w.getAttribute('style')};
           var img=w.querySelector('img');
           if(!img)return;
           if(!img._zappyDesktop)img._zappyDesktop={src:img.getAttribute('src'),style:img.getAttribute('style')};
-          var mobileZoom=parseFloat(img.getAttribute('data-zappy-mobile-zoom'));
+          var mobileZoomStr=img.getAttribute('data-zappy-mobile-zoom');
+          var mobileZoom=parseFloat(mobileZoomStr);
           var mobileSrc=img.getAttribute('data-zappy-mobile-src');
           var mobilePos=img.getAttribute('data-zappy-mobile-object-position');
           var parentOvf=w.parentElement?((w.parentElement.style.overflow||'')+(window.getComputedStyle(w.parentElement).overflow||'')).trim():'';
@@ -1127,22 +1174,44 @@
             w.style.setProperty('max-width','100%','important');
           }
           if(mobileSrc)img.src=mobileSrc;
-          var pos=mobilePos||img.style.getPropertyValue('object-position')||'50% 50%';
-          if(mobileZoom>1){
-            var wH=w.getAttribute('data-zappy-zoom-wrapper-height');
-            w.style.setProperty('height',wH||'200px','important');
-            img.style.setProperty('position','relative','important');
-            img.style.setProperty('width','100%','important');
-            img.style.setProperty('height','auto','important');
-            img.style.setProperty('min-height','100%','important');
-            img.style.setProperty('max-width','none','important');
-            img.style.setProperty('max-height','none','important');
-            img.style.setProperty('object-fit','cover','important');
-            img.style.setProperty('left','0','important');
-            img.style.setProperty('top','0','important');
-            img.style.setProperty('object-position',pos,'important');
-            img.style.setProperty('transform','scale('+mobileZoom+')','important');
-            img.style.setProperty('transform-origin',pos,'important');
+          function _applyZoomCrop(_img,_w,_ePos,_eZoom){
+            var rect=_w.getBoundingClientRect();
+            if(!rect||!rect.width||!rect.height)return;
+            var nW=_img.naturalWidth||0,nH=_img.naturalHeight||0;
+            if(!(nW>0&&nH>0))return;
+            var iA=nW/nH,cA=rect.width/rect.height;
+            var cv=_coverPct(iA,cA);
+            var wP=100,hP=100;
+            if(_eZoom>=1){wP=cv.w*_eZoom;hP=cv.h*_eZoom;}
+            else{var t2=(_eZoom-0.5)/0.5;if(!isFinite(t2))t2=0;t2=Math.max(0,Math.min(1,t2));wP=100+t2*(cv.w-100);hP=100+t2*(cv.h-100);}
+            var p2=_parsePos(_ePos);
+            var lP=(100-wP)*(p2.x/100);
+            var tP=(100-hP)*(p2.y/100);
+            _img.style.setProperty('position','absolute','important');
+            _img.style.setProperty('left',lP+'%','important');
+            _img.style.setProperty('top',tP+'%','important');
+            _img.style.setProperty('width',wP+'%','important');
+            _img.style.setProperty('height',hP+'%','important');
+            _img.style.setProperty('max-width','none','important');
+            _img.style.setProperty('max-height','none','important');
+            _img.style.setProperty('display','block','important');
+            _img.style.setProperty('object-fit',_eZoom<1?'fill':'cover','important');
+            _img.style.setProperty('transform','none','important');
+            _img.style.setProperty('margin','0','important');
+          }
+          if(_sW>0&&_sH>0){
+            var effZoom=(isFinite(mobileZoom)&&mobileZoom>0)?mobileZoom:(parseFloat(img.getAttribute('data-zappy-zoom'))||1);
+            var effPos=mobilePos||img.getAttribute('data-zappy-object-position')||img.style.objectPosition||'50% 50%';
+            w.style.setProperty('overflow','hidden','important');
+            w.style.setProperty('position','relative','important');
+            w.style.setProperty('width','100%','important');
+            w.style.setProperty('max-width','100%','important');
+            if(_sW>0&&_sH>0){w.style.setProperty('padding-bottom','0','important');w.style.setProperty('aspect-ratio',_sW+'/'+_sH,'important');w.style.setProperty('height','auto','important');}
+            _applyZoomCrop(img,w,effPos,effZoom);
+            if(!(img.complete&&img.naturalWidth>0)){
+              (function(_i,_w2,_p,_z){_i.addEventListener('load',function _ol(){_i.removeEventListener('load',_ol);try{_applyZoomCrop(_i,_w2,_p,_z);}catch(e){}});
+              })(img,w,effPos,effZoom);
+            }
           }else{
             if(!inConstrainedParent)w.style.setProperty('height','auto','important');
             img.style.setProperty('position','relative','important');
@@ -1154,7 +1223,6 @@
             img.style.setProperty('left','0','important');
             img.style.setProperty('top','0','important');
             img.style.setProperty('transform','none','important');
-            if(mobilePos)img.style.setProperty('object-position',pos,'important');
           }
         });
         document.querySelectorAll('img[data-zappy-mobile-src],img[data-zappy-mobile-object-position],img[data-zappy-mobile-zoom]').forEach(function(img){

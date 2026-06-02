@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+  <channel>
+    <title>Idron.co2</title>
+    <link>https://idron.store</link>
+    <description>Product feed for Idron.co2</description>
+    <lastBuildDate>Tue, 02 Jun 2026 18:17:53 GMT</lastBuildDate>
+    <item>
+      <g:id>da323cca-3dfb-44c8-af12-10f136a4131d</g:id>
+      <g:title>טרריום 21*21*30</g:title>
+      <g:description>טרריום 21*21*30</g:description>
+      <g:link>https://idron.store/product/trryvm-212130-a9lhr4</g:link>
+      <g:image_link>https://idron.store/assets/product-enhanced-1771775038626-ovs8eo.webp</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>280.00 USD</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Idron.co2</g:brand>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:product_type>מוצרים לזוחלים</g:product_type>
+    </item>
+    <item>
+      <g:id>2e108019-9c1d-419c-bc80-82352a2725c7</g:id>
+      <g:title>טרריום 31*31*20 REPTIZOO</g:title>
+      <g:description>טרריום 31*31*20 REPTIZOO</g:description>
+      <g:link>https://idron.store/product/trryvm-313120-reptizoo-0z2u7y</g:link>
+      <g:image_link>https://idron.store/assets/product-enhanced-1771777609765-3xkw6a.webp</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>333.00 USD</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Idron.co2</g:brand>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:product_type>מוצרים לזוחלים</g:product_type>
+    </item>
+    <item>
+      <g:id>c5d7bc75-0dea-4ba8-afb9-cfcb06ad90ed</g:id>
+      <g:title>טרריום 45*45*60 REPTIZOO</g:title>
+      <g:description>טרריום 45*45*60 REPTIZOO</g:description>
+      <g:link>https://idron.store/product/trryvm-454560-reptizoo-ss8eku</g:link>
+      <g:image_link>https://idron.store/assets/product-enhanced-1771777567226-kzcbxh.webp</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>949.00 USD</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>Idron.co2</g:brand>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:product_type>מוצרים לזוחלים</g:product_type>
+    </item>
+  </channel>
+</rss>
